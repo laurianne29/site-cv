@@ -5,7 +5,7 @@ session_start();
 
 if(isset($_SESSION['Auth'])){
 
-	header('location:index.php');
+	header('location:index02.php');
 }
 //On teste si quelque chose a été envoyé depuis un formulaire
 if ($_POST) {
@@ -29,7 +29,7 @@ if ($_POST) {
 		$_SESSION['Auth'] = $query -> fetch(PDO::FETCH_ASSOC);
 
 		//aprés l'avoir enregistré dans notre variable nous allons le rediriger
-		header('location:index.php');
+		header('location:index02.php');
 	}else{
 		//sinon si les identifiant sont incorrecte on lui dit
 		echo "<div class='error'>Identifiants incorrectes !</div>";
