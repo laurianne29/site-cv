@@ -52,7 +52,7 @@ $loisirs = $sql -> fetchAll();
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <link href="front/css/style-front.css">
+    <link href="front/css/style-front.css" rel="stylesheet">
 
 </head>
 
@@ -97,19 +97,17 @@ $loisirs = $sql -> fetchAll();
         <!-- /.container-fluid -->
     </nav>
 
-    <!-- Header -->
-    <header>
+    <!-- HEADER -->
     <!-- UTILISATEUR -->
-    <?php 
-        $sql = $bdd->query("SELECT * FROM user");
-        $user = $sql->fetch();
-     ?>
+    <header>
         <div class="container">
+            <div class="row" id="icon">
+                <!-- <i class="fa fa-twitter-square fa-4x" aria-hidden="true"></i>
+                <i class="fa fa-github fa-4x" aria-hidden="true"></i> -->
+            </div>
             <div class="intro-text">
                 <div class="intro-heading">
-                    <?php 
-                    echo $user['prenom'] . ' ' .
-                    $user['nom']; ?>
+                    <?php echo $user['prenom'] . ' ' . $user['nom']; ?>
                 </div>
                 <div class="intro-lead-in">
                     <?= $titre[0]['titre_cv']?>
@@ -121,6 +119,9 @@ $loisirs = $sql -> fetchAll();
                 </div>
                 <!-- <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a> -->
             </div>
+            <div >
+                <a href="#services"><i class="fa fa-angle-double-down fa-5x" aria-hidden="true"></i></a>
+            </div>
         </div>
     </header>
 
@@ -129,11 +130,28 @@ $loisirs = $sql -> fetchAll();
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Profil</h2>
+                    <h2 class="section-heading">A propos de moi</h2>
                     <h3 class="section-subheading text-muted"><?= $titre[0]['accroche'] ?></h3>
                 </div>
             </div>
-            <div class="row text-center">
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="img/hp.png" alt="photo-profil.jpg" width="200">
+                </div>
+                <div class="col-md-6">
+                    <div class="timeline-heading text-right">
+                        <h4>Prénom</h4>
+                        <p> <?= $user['prenom']; ?></p>
+                        <h4>Nom</h4>
+                        <p> <?= $user['nom']; ?></p>
+                        <h4>Age</h4>
+                        <p> <?= $user['age'] . ' ans'; ?></p>
+                        <h4>Email</h4>
+                        <p> <?= $user['email']; ?></p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row text-center">
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
@@ -158,7 +176,7 @@ $loisirs = $sql -> fetchAll();
                     <h4 class="service-heading">Créative...</h4>
                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -375,7 +393,7 @@ $loisirs = $sql -> fetchAll();
             </div>
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <div class="skills">
+                    <div class="skills" id="loisir">
                         <?= $loisirs[0]['loisir'] . '<br><br>'?>
                         <?= $loisirs[1]['titre_loisir'] . '<br><br>' ?>
                         <?= $loisirs[2]['titre_loisir'] . '<br><br>' ?>

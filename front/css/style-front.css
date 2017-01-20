@@ -1,7 +1,98 @@
 header {
-	background-image: url('../img/machina.jpg');
+	background-image: url('../img/laptop.jpg'); ;
 }
 
+.intro-text {
+	margin-bottom: 10px; 
+}
+
+.fa-angle-double-down {
+	margin-bottom: 50px;
+}
+
+
+/*----------------------------------------------- PROFIL*/
 .fa-circle{
 	color: #4D3968;
+}
+
+#services {
+	/*background: #F0E6FF;*/
+	background: #FFF4EE;
+}
+
+/*----------------------------------------------- COMPETENCES */
+#portfolio {
+	/*background: #191A3F;*/
+	background: #2F2C3F;
+	/*background: #230608;*/
+}
+#portfolio .section-heading {
+	color: #D8CD81;
+}
+
+/*----------------------------------------------- FORMATIONS / EXPERIENCES */
+#about {
+	/*background: #F0E6FF;*/
+	background: #FFF4EE;
+}
+
+/*----------------------------------------------- LOISIRS */
+#team {
+	/*background: #8F90CB;*/
+	/*background: #230608;*/
+	background: #2F2C3F;
+}
+
+#team .section-heading {
+	color: #D8CD81;
+}
+
+#loisir {
+	color: #FFF4EE;
+}
+
+
+section#contact {
+	/*background-image: url('../img/contact.jpg');*/
+	animation: pulse 4s infinite;
+}
+	@keyframes pulse {
+		0% {
+		background-color: #191A3F;
+		}
+		50% {
+		background-color: #302442;
+		}
+		100% {
+		background-color: #191A3F;
+		}
+	}
+/*----------------------------------------------- FORMULAIRE */
+
+section#contact .section-heading {
+  color: white;
+}
+section#contact .form-group {
+  margin-bottom: 25px;
+}
+section#contact .form-group input,
+section#contact .form-group textarea {
+  padding: 20px;
+  border-radius: 30px;
+}
+section#contact .form-group input.form-control {
+  height: auto;
+}
+section#contact .form-group textarea.form-control {
+  height: 236px;
+}
+section#contact .form-control:focus {
+  border-color: #fed136;
+  /*box-shadow: none;*/
+}
+/*----------------------------------------------- FIN FORMULAIRE */
+
+.timeline-image {
+	background: #423E55;
 }
