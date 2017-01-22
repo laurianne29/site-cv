@@ -31,7 +31,7 @@ $loisirs = $sql -> fetchAll();
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Agency - Start Bootstrap Theme</title>
+    <title>Laurianne Michelot</title>
     
     <!-- Bootstrap Core CSS -->
     <link href="front/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -54,8 +54,6 @@ $loisirs = $sql -> fetchAll();
     <![endif]-->
 
     <link href="front/css/style-front.css" rel="stylesheet">
-
-
 </head>
 
 <body id="page-top" class="index">
@@ -73,7 +71,7 @@ $loisirs = $sql -> fetchAll();
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
+                <ul id="header-nav" class="nav navbar-nav navbar-right">
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
@@ -84,10 +82,10 @@ $loisirs = $sql -> fetchAll();
                         <a class="page-scroll" href="#portfolio">Compétences</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">Experiences</a>
+                        <a class="page-scroll" href="#about">Experiences & Formations</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#team">Formations</a>
+                        <a class="page-scroll" href="#team">Portfolio</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -110,8 +108,6 @@ $loisirs = $sql -> fetchAll();
             <div class="intro-text">
                 <div class="intro-heading">
                     <?php echo $user['prenom'] . ' ' . $user['nom']; ?>
-
-
                 </div>
                 <div class="intro-lead-in">
                     <?= $titre[0]['titre_cv']?>
@@ -122,11 +118,9 @@ $loisirs = $sql -> fetchAll();
                     </span> -->
                 </div>
                 <!-- <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a> -->
-            </div>
-
-            <div >
                 <a href="#services"><i class="fa fa-angle-double-down fa-5x" aria-hidden="true"></i></a>
             </div>
+
 
         </div>
     </header>
@@ -136,7 +130,6 @@ $loisirs = $sql -> fetchAll();
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-
                     <h2 class="section-heading">A propos de moi</h2>
                     <h3 class="section-subheading text-muted"><?= $titre[0]['accroche'] ?></h3>
                 </div>
@@ -195,13 +188,11 @@ $loisirs = $sql -> fetchAll();
     <section id="portfolio" class="bg-light-gray">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Compétences</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                <div class="col-md-12">
+                    <h2 class="section-heading text-center">Compétences</h2>
                 </div>
             </div>
             <div class="row">
-
                 <div class="col-md-offset-2 col-md-8">
                     <span class="skills">
                         <table class="table table-striped text-center">
@@ -220,13 +211,103 @@ $loisirs = $sql -> fetchAll();
                                     </td>
                                 </tr>
                             <?php $i++; } ?>
-
-
                         </table>
                     </span>
                 </div>
             </div>
-<!--             <div class="row">
+        </div>
+    </section>
+
+    <!-- SECTION EXPERIENCE -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Formations / Expériences</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="front/img/about/1.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4><?= $experiences[0]['dates'] ?></h4>
+                                    <h4 class="subheading"><?= $experiences[0]['experience']; ?></h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted"><?= $experiences[0]['taches'] ?></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="front/img/about/2.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4><?= $formations[0]['dates_formation'] ?></h4>
+                                    <h4 class="subheading"><?= $formations[0]['formation']; ?></h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted"><?= $formations[0]['description'] ?></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="front/img/about/3.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4><?= $experiences[1]['dates'] ?></h4>
+                                    <h4 class="subheading"><?= $experiences[1]['experience']; ?></h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted"><?= $experiences[1]['taches']; ?></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="front/img/about/4.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4><?= $formations[1]['dates_formation'] ?></h4>
+                                    <h4 class="subheading"><?= $formations[1]['formation'] ?></h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted"><?= $formations[1]['description'] ?></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <h4>Be Part
+                                    <br>Of Our
+                                    <br>Story!</h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="team" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 class="section-heading">Portfolio</h2>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
@@ -312,111 +393,7 @@ $loisirs = $sql -> fetchAll();
                     </div>
                 </div>
             </div>
-        </div> -->
-    </section>
-
-    <!-- SECTION EXPERIENCE -->
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Formations / Expériences</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="timeline">
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="front/img/about/1.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4><?= $experiences[0]['dates'] ?></h4>
-                                    <h4 class="subheading"><?= $experiences[0]['experience']; ?></h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted"><?= $experiences[0]['taches'] ?></p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="front/img/about/2.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4><?= $formations[0]['dates_formation'] ?></h4>
-                                    <h4 class="subheading"><?= $formations[0]['formation']; ?></h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted"><?= $formations[0]['description'] ?></p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="front/img/about/3.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4><?= $experiences[1]['dates'] ?></h4>
-                                    <h4 class="subheading"><?= $experiences[1]['experience']; ?></h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted"><?= $experiences[1]['taches']; ?></p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="front/img/about/4.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4><?= $formations[1]['dates_formation'] ?></h4>
-                                    <h4 class="subheading"><?= $formations[1]['formation'] ?></h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted"><?= $formations[1]['description'] ?></p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <h4>Be Part
-                                    <br>Of Our
-                                    <br>Story!</h4>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </div>
-    </section>
-
-    <!-- FORMATION SECTION -->
-    <section id="team" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Ce que j'aime...</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="skills" id="loisir">
-
-                        <?= $loisirs[0]['loisir'] . '<br><br>'?>
-                        <?= $loisirs[1]['titre_loisir'] . '<br><br>' ?>
-                        <?= $loisirs[2]['titre_loisir'] . '<br><br>' ?>
-                        <?= $loisirs[3]['titre_loisir'] . '<br><br>' ?>
-                        <?= $loisirs[4]['titre_loisir'] . '<br><br>' ?>
-                    </div>
-                </div>
-            </div>
 <!--             <div class="row">
                 <div class="col-sm-4">
                     <div class="team-member">
@@ -473,28 +450,11 @@ $loisirs = $sql -> fetchAll();
     </section>
 
     <!-- Clients Aside -->
-    <aside class="clients">
+    <aside class="dl-cv">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="front/img/logos/envato.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="front/img/logos/designmodo.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="front/img/logos/themeforest.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="front/img/logos/creative-market.jpg" class="img-responsive img-centered" alt="">
-                    </a>
+                <div class="col-lg-12 text-center">
+                    <button class="btn btn-xl"><a href="#">Télécharger mon CV !</a></button>
                 </div>
             </div>
         </div>
@@ -756,20 +716,21 @@ $loisirs = $sql -> fetchAll();
     </div>
 
     <!-- jQuery -->
-    <script src="front/front/vendor/jquery/jquery.min.js"></script>
+    <script src="front/vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="front/front/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="front/vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="front/https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
     <!-- Contact Form JavaScript -->
-    <script src="front/front/js/jqBootstrapValidation.js"></script>
-    <script src="front/front/js/contact_me.js"></script>
+    <script src="front/js/jqBootstrapValidation.js"></script>
+    <script src="front/js/contact_me.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="front/front/js/agency.min.js"></script>
+    <script src="front/js/agency.min.js"></script>
+    <!-- <script src="front/js/main.js"></script> -->
 
 </body>
 
