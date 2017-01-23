@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,400);
  @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Bad+Script|Merienda|Clicker Script|Stalemate|Amita');
 
 header {
@@ -37,6 +38,7 @@ header .intro-text {
   	  font-family: 'Amatic SC', cursive;
   	  font-style: normal;
   	  letter-spacing: 5px;
+  	  font-size: 3.2em;
   }
 
 .fa-angle-double-down {
@@ -68,11 +70,106 @@ header .intro-text {
 	color: #D8CD81;
 }
 
+.skill-box > .skills-circle > ul {
+  padding: 0;
+  text-align: center;
+  list-style-type: none;
+}
+.skill-box > .skills-circle > ul > li {
+  width: 150px;
+  height: 150px;
+  background-color: #ddd;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 10px;
+}
+.skill-box > .skills-circle > ul > li > span {
+  color: #7a7;
+}
+.skill-box > .skills-circle > ul > li > span.text, .skill-box > .skills-circle > ul > li > span ~ b {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  margin-top: -8px;
+  z-index: 1;
+}
+.skill-box > .skills-circle > ul > li > span.text ~ b, .skill-box > .skills-circle > ul > li > span ~ b ~ b {
+  font-weight: normal;
+  margin-top: 8px;
+}
+.skill-box > .skills-circle > ul > li > span.bar-circle-right, .skill-box > .skills-circle > ul > li > span.bar-circle-left {
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #B0DAB9;
+  clip: rect(0, 75px, 150px, 0);
+}
+.skill-box > .skills-circle > ul > li > span.bar-circle-left {
+  background: #ddd;
+}
+.skill-box > .skills-circle > ul > li > span.bar-circle-cover {
+  display: block;
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  background-color: #eee;
+  z-index: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
 /*----------------------------------------------- FORMATIONS / EXPERIENCES */
 #about {
 	/*background: #F0E6FF;*/
 	background: #B0C7D8;
 }
+
+.timeline > li .timeline-image {
+	width: 100px;
+	height: 100px;
+	margin-left: -50px;
+	border: 3px solid snow;
+}
+
+.timeline > li .timeline-image > h4 {
+	margin-top: 12px; 
+}
+
+.fa-graduation-cap {
+	margin-top: 15px;
+}
+.fa-briefcase {
+	margin-top: 15px;
+}
+
+.timeline li .timeline-panel:hover {
+	background: #eee;
+	box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+}
+
+.timeline li .timeline-panel {
+	line-height: 40px;
+	margin-right: 100px;
+	margin-left: 100px;
+	width: 30%;
+}
+
+.timeline-heading {
+	margin-top: 15px; 
+}
+
 
 /*----------------------------------------------- LOISIRS */
 #team {

@@ -54,6 +54,7 @@ $loisirs = $sql -> fetchAll();
     <![endif]-->
 
     <link href="front/css/style-front.css" rel="stylesheet">
+
 </head>
 
 <body id="page-top" class="index">
@@ -135,21 +136,20 @@ $loisirs = $sql -> fetchAll();
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-5">
+                <!-- <div class="col-md-5">
                     <img src="img/hp.png" alt="photo-profil.jpg" width="200">
-                </div>
+                </div> -->
                 <div class="col-md-6">
-                    <div class="timeline-heading text-right">
-                        <h4>Prénom</h4>
-                        <p> <?= $user['prenom']; ?></p>
-                        <h4>Nom</h4>
-                        <p> <?= $user['nom']; ?></p>
+                    <div class="timeline-heading text-left">
                         <h4>Age</h4>
                         <p> <?= $user['age'] . ' ans'; ?></p>
                         <h4>Email</h4>
                         <p> <?= $user['email']; ?></p>
+                        <h4>Téléphone</h4>
+                        <p> <?= $user['tel']; ?></p>
                     </div>
                 </div>
+
             </div>
             <!-- <div class="row text-center">
 
@@ -179,46 +179,49 @@ $loisirs = $sql -> fetchAll();
                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                 </div>
             </div> -->
-
-
         </div>
     </section>
 
     <!-- SECTION COMPETENCES -->
     <section id="portfolio" class="bg-light-gray">
-        <div class="container">
+        <div class='container'>
             <div class="row">
                 <div class="col-md-12">
                     <h2 class="section-heading text-center">Compétences</h2>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-offset-2 col-md-8">
-                    <span class="skills">
-                        <table class="table table-striped text-center">
-                            <th class="text-center text-uppercase">Compétence</th>
-                            <th class="text-center text-uppercase">Niveau</th>
-                            <?php 
-                                $i = 0;
-                                while($i < count($competences)){
-                            ?>
-                                <tr>
-                                    <td>
-                                        <?= $competences[$i]['competence']; ?>
-                                    </td>
-                                    <td> 
-                                        <?= $competences[$i]['niveau']; ?>
-                                    </td>
-                                </tr>
-                            <?php $i++; } ?>
-                        </table>
-                    </span>
+                <div class="skill-box">
+                    <div class="skills-circle">
+                        <ul>
+                            <li data-percent="32"><span class="text">Power</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+                            <li data-percent="57"><span class="text">Power</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+                            <li data-percent="85"><span class="text">Power</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+                        </ul>
+                    </div>
+                    <div class="skills-circle">
+                        <ul>
+                            <li data-percent="20"><span class="text">Power</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+                            <li data-percent="57"><span class="text">Power</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+                            <li data-percent="85"><span class="text">Power</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="skill-box">
+                    <div class="skills-circle">
+                        <ul>
+                            <li data-percent="50"><span class="text">Power</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+                            <li data-percent="57"><span class="text">Power</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+                            <li data-percent="85"><span class="text">Power</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- SECTION EXPERIENCE -->
+    <!-- SECTION EXPERIENCES / FORMATIONS-->
     <section id="about">
         <div class="container">
             <div class="row">
@@ -232,7 +235,8 @@ $loisirs = $sql -> fetchAll();
                     <ul class="timeline">
                         <li>
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="front/img/about/1.jpg" alt="">
+                                <img class="img-circle img-responsive">
+                                <i class="fa fa-briefcase fa-4x" aria-hidden="true"></i>
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -246,7 +250,8 @@ $loisirs = $sql -> fetchAll();
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="front/img/about/2.jpg" alt="">
+                                <img class="img-circle img-responsive">
+                                <i class="fa fa-graduation-cap fa-4x" aria-hidden="true"></i>
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -260,7 +265,8 @@ $loisirs = $sql -> fetchAll();
                         </li>
                         <li>
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="front/img/about/3.jpg" alt="">
+                                <img class="img-circle img-responsive">
+                                <i class="fa fa-briefcase fa-4x" aria-hidden="true"></i>
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -274,7 +280,8 @@ $loisirs = $sql -> fetchAll();
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="front/img/about/4.jpg" alt="">
+                                <img class="img-circle img-responsive">
+                                <i class="fa fa-graduation-cap fa-4x" aria-hidden="true"></i>
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -288,9 +295,7 @@ $loisirs = $sql -> fetchAll();
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <h4>Be Part
-                                    <br>Of Our
-                                    <br>Story!</h4>
+                                <h4>À suivre...</h4>
                             </div>
                         </li>
                     </ul>
@@ -716,6 +721,7 @@ $loisirs = $sql -> fetchAll();
     </div>
 
     <!-- jQuery -->
+
     <script src="front/vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
@@ -730,8 +736,8 @@ $loisirs = $sql -> fetchAll();
 
     <!-- Theme JavaScript -->
     <script src="front/js/agency.min.js"></script>
-    <!-- <script src="front/js/main.js"></script> -->
-
+    <script src="http://rendro.github.io/easy-pie-chart/javascripts/jquery.easy-pie-chart.js"></script>
+    <script src="front/js/main.js"></script>
 </body>
 
 </html>
