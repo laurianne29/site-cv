@@ -11,13 +11,6 @@ header {
 	font-style: italic;*/
 }
 
-/*#header-nav {
-	margin-right: -190px;
-	margin-top: 30px;
-}
-  #header-nav li {
-  	  margin-top: 60px;
-  }*/
   #header-nav li a{
   	  color: #BC2F47;
   	  font-family: 'Bad Script', cursive;
@@ -57,15 +50,33 @@ header .intro-text {
 
 #services {
 	/*background: #F0E6FF;*/
-	background: #B0C7D8;
+	/*background: #B0C7D8;*/
+	background: #D0B1B7;
 }
 
+.img-profil {
+	width: 200px;
+	height: 200px;
+	margin: 0 auto 20px;
+}
+
+#loisirs h4 {
+	margin-top: 30px;
+}
+
+.logo-loisir {
+	display: inline-block;
+}
+.logo-loisir img {
+	margin: 0px 18px;
+}
 /*----------------------------------------------- COMPETENCES */
 #portfolio {
 	/*background: #191A3F;*/
 	background: #1F2E41;
 	/*background: #230608;*/
 }
+
 #portfolio .section-heading {
 	color: #D8CD81;
 }
@@ -83,7 +94,7 @@ header .intro-text {
   position: relative;
   display: inline-block;
   overflow: hidden;
-  margin: 10px;
+  margin: 40px 50px;
 }
 .skill-box > .skills-circle > ul > li > span {
   color: #7a7;
@@ -114,8 +125,8 @@ header .intro-text {
 }
 .skill-box > .skills-circle > ul > li > span.bar-circle-cover {
   display: block;
-  width: 70%;
-  height: 70%;
+  width: 88%;
+  height: 88%;
   border-radius: 50%;
   background-color: #eee;
   z-index: 0;
@@ -132,7 +143,8 @@ header .intro-text {
 /*----------------------------------------------- FORMATIONS / EXPERIENCES */
 #about {
 	/*background: #F0E6FF;*/
-	background: #B0C7D8;
+	/*background: #B0C7D8;*/
+	background: #D0B1B7;
 }
 
 .timeline > li .timeline-image {
@@ -171,11 +183,11 @@ header .intro-text {
 }
 
 
-/*----------------------------------------------- LOISIRS */
+/*----------------------------------------------- PORTFOLIO */
 #team {
 	/*background: #8F90CB;*/
 	/*background: #230608;*/
-	background: #2F2C3F;
+	background: #892234;
 }
 
 #team .section-heading {

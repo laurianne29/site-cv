@@ -136,10 +136,12 @@ $loisirs = $sql -> fetchAll();
                 </div>
             </div>
             <div class="row">
-                <!-- <div class="col-md-5">
-                    <img src="img/hp.png" alt="photo-profil.jpg" width="200">
-                </div> -->
-                <div class="col-md-6">
+                <div class=" col-md-12">
+                    <img class="img-circle img-responsive img-profil" src="front/img/maison.jpeg">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
                     <div class="timeline-heading text-left">
                         <h4>Age</h4>
                         <p> <?= $user['age'] . ' ans'; ?></p>
@@ -149,36 +151,26 @@ $loisirs = $sql -> fetchAll();
                         <p> <?= $user['tel']; ?></p>
                     </div>
                 </div>
-
+                <div class="col-xs-offset-3 col-lg-5">
+                    <div class="text-right">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo assumenda inventore impedit delectus, incidunt sapiente doloremque quam aliquid nobis debitis. Porro laborum architecto asperiores, iste accusamus at, doloremque quas recusandae.</p>
+                    </div>
+                </div>
             </div>
-            <!-- <div class="row text-center">
-
-
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Curieuse...</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6">
+                    <div id="loisirs" class="timeline-heading text-left">
+                        <h4 class="text-center">Mes intérêts</h4>
+                        <div class="logo-loisir">
+                            <img src="front/img/logos/html.png" alt="logo code" width="70">
+                            <img src="front/img/logos/music.png" alt="logo guitare" width="70">
+                            <img src="front/img/logos/cat.png" alt="logo chat" width="70">
+                            <img src="front/img/logos/travel-1.png" alt="logo voyage" width="70">
+                            <img src="front/img/logos/telescope.png" alt="logo telescope" width="70">
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Assidue...</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Créative...</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-            </div> -->
+            </div>
         </div>
     </section>
 
@@ -194,27 +186,16 @@ $loisirs = $sql -> fetchAll();
                 <div class="skill-box">
                     <div class="skills-circle">
                         <ul>
-                            <li data-percent="32"><span class="text">Power</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-                            <li data-percent="57"><span class="text">Power</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-                            <li data-percent="85"><span class="text">Power</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+                            <li data-percent="75"><span class="text">HTML</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+                            <li data-percent="60"><span class="text">CSS</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+                            <li data-percent="15"><span class="text">Javascript</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
                         </ul>
                     </div>
                     <div class="skills-circle">
                         <ul>
-                            <li data-percent="20"><span class="text">Power</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-                            <li data-percent="57"><span class="text">Power</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-                            <li data-percent="85"><span class="text">Power</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="skill-box">
-                    <div class="skills-circle">
-                        <ul>
-                            <li data-percent="50"><span class="text">Power</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-                            <li data-percent="57"><span class="text">Power</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-                            <li data-percent="85"><span class="text">Power</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+                            <li data-percent="45"><span class="text">PHP</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+                            <li data-percent="65"><span class="text">Bootstrap</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+                            <li data-percent="55"><span class="text">Wordpress</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
                         </ul>
                     </div>
                 </div>
