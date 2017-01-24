@@ -100,47 +100,47 @@ $loisirs = $sql -> fetchAll();
 
     <!-- HEADER -->
     <!-- UTILISATEUR -->
-    <header>
-        <div class="container">
-            <div class="row" id="icon">
-                <!-- <i class="fa fa-twitter-square fa-4x" aria-hidden="true"></i>
-                <i class="fa fa-github fa-4x" aria-hidden="true"></i> -->
-            </div>
-            <div class="intro-text">
-                <div class="intro-heading">
-                    <?php echo $user['prenom'] . ' ' . $user['nom']; ?>
-                </div>
-                <div class="intro-lead-in">
-                    <?= $titre[0]['titre_cv']?>
-                </div>
-                <div class="intro-lead-in">
-                    <!-- <span class="fa-stack fa-2x">
-                        <img class="img-circle" style="background: snow;" src="img/hp.png" alt="image harry potter" width="150">
-                    </span> -->
-                </div>
-                <!-- <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a> -->
-                <a href="#services"><i class="fa fa-angle-double-down fa-5x" aria-hidden="true"></i></a>
-            </div>
 
-
-        </div>
-    </header>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="front/img/fond-montgolfiere.png">
+    <!-- <div class="parallax-montgolfiere" data-parallax="scroll" data-image-src="front/img/montgolfiere.png">
+        
+    </div> -->
+        <header>
+            <div class="container">
+                <div class="intro-text">
+                    <div class="intro-heading">
+                        <?php echo $user['prenom'] . ' ' . $user['nom']; ?>
+                    </div>
+                    <div class="intro-lead-in">
+                        <?= $titre[0]['titre_cv']?>
+                    </div>
+                    <div class="icones" class="intro-lead-in">
+                        <a href="https://github.com/laurianne29" target="_blank"><i class="fa fa-github fa-4x" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/CryptiX29?lang=fr" target="_blank"><i class="fa fa-twitter fa-4x" aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/in/laurianne-michelot-04a174b2?trk=hp-identity-name" target="_blank"><i class="fa fa-linkedin fa-4x" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/killa_luna/" target="_blank"><i class="fa fa-instagram fa-4x" aria-hidden="true"></i></a>
+                    </div>
+                    <a class="page-scroll" href="#services"><i class="fa fa-angle-double-down fa-5x" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </header>
+    </div>
 
     <!-- SECTION PROFIL -->
     <section id="services">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">A propos de moi</h2>
+                    <h2 class="section-heading">À propos de moi</h2>
                     <h3 class="section-subheading text-muted"><?= $titre[0]['accroche'] ?></h3>
                 </div>
             </div>
             <div class="row">
-                <div class=" col-md-12">
+                <div class="col-md-12">
                     <img class="img-circle img-responsive img-profil" src="front/img/maison.jpeg">
                 </div>
             </div>
-            <div class="row">
+            <div class="row" id="text-profil">
                 <div class="col-lg-4">
                     <div class="timeline-heading text-left">
                         <h4>Age</h4>
@@ -175,33 +175,35 @@ $loisirs = $sql -> fetchAll();
     </section>
 
     <!-- SECTION COMPETENCES -->
-    <section id="portfolio" class="bg-light-gray">
-        <div class='container'>
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class="section-heading text-center">Compétences</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="skill-box">
-                    <div class="skills-circle">
-                        <ul>
-                            <li data-percent="75"><span class="text">HTML</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-                            <li data-percent="60"><span class="text">CSS</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-                            <li data-percent="15"><span class="text">Javascript</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-                        </ul>
-                    </div>
-                    <div class="skills-circle">
-                        <ul>
-                            <li data-percent="45"><span class="text">PHP</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-                            <li data-percent="65"><span class="text">Bootstrap</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-                            <li data-percent="55"><span class="text">Wordpress</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-                        </ul>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="front/img/montgolfiere.jpg">
+        <section id="portfolio" class="bg-light-gray">
+            <div class='container'>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="section-heading text-center">Compétences</h2>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="skill-box">
+                        <div class="skills-circle">
+                            <ul>
+                                <li data-percent="75"><span class="text">HTML</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+                                <li data-percent="60"><span class="text">CSS</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+                                <li data-percent="15"><span class="text">Javascript</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+                            </ul>
+                        </div>
+                        <div class="skills-circle">
+                            <ul>
+                                <li data-percent="45"><span class="text">PHP</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+                                <li data-percent="65"><span class="text">Bootstrap</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+                                <li data-percent="45"><span class="text">Wordpress</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
     <!-- SECTION EXPERIENCES / FORMATIONS-->
     <section id="about">
         <div class="container">
@@ -286,166 +288,114 @@ $loisirs = $sql -> fetchAll();
     </section>
 
     <!-- PORTFOLIO SECTION -->
-    <section id="team" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h2 class="section-heading">Portfolio</h2>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="front/img/montgolfiere.jpg">
+        <section id="team" class="bg-light-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2 class="section-heading">Portfolio</h2>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
                             </div>
+                            <img src="front/img/portfolio/roundicons.png" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Round Icons</h4>
+                            <p class="text-muted">Graphic Design</p>
                         </div>
-                        <img src="front/img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Round Icons</h4>
-                        <p class="text-muted">Graphic Design</p>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
                             </div>
+                            <img src="front/img/portfolio/startup-framework.png" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Startup Framework</h4>
+                            <p class="text-muted">Website Design</p>
                         </div>
-                        <img src="front/img/portfolio/startup-framework.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Startup Framework</h4>
-                        <p class="text-muted">Website Design</p>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
                             </div>
+                            <img src="front/img/portfolio/treehouse.png" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Treehouse</h4>
+                            <p class="text-muted">Website Design</p>
                         </div>
-                        <img src="front/img/portfolio/treehouse.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Treehouse</h4>
-                        <p class="text-muted">Website Design</p>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
                             </div>
+                            <img src="front/img/portfolio/golden.png" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Golden</h4>
+                            <p class="text-muted">Website Design</p>
                         </div>
-                        <img src="front/img/portfolio/golden.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Golden</h4>
-                        <p class="text-muted">Website Design</p>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
                             </div>
+                            <img src="front/img/portfolio/escape.png" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Escape</h4>
+                            <p class="text-muted">Website Design</p>
                         </div>
-                        <img src="front/img/portfolio/escape.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Escape</h4>
-                        <p class="text-muted">Website Design</p>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
                             </div>
+                            <img src="front/img/portfolio/dreams.png" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Dreams</h4>
+                            <p class="text-muted">Website Design</p>
                         </div>
-                        <img src="front/img/portfolio/dreams.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Dreams</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-<!--             <div class="row">
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="front/img/team/1.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Kay Garland</h4>
-                        <p class="text-muted">Lead Designer</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="front/img/team/2.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Larry Parker</h4>
-                        <p class="text-muted">Lead Marketer</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="front/img/team/3.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Diana Pertersen</h4>
-                        <p class="text-muted">Lead Developer</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-                </div>
-            </div> -->
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- Clients Aside -->
-    <aside class="dl-cv">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <button class="btn btn-xl"><a href="#">Télécharger mon CV !</a></button>
+        <aside class="dl-cv">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="button"><a href="#">-> MON CV PAPIER <-</a></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </aside>
-
+        </aside>
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
@@ -480,9 +430,9 @@ $loisirs = $sql -> fetchAll();
                                 </div>
                             </div>
                             <div class="clearfix"></div>
-                            <div class="col-lg-12 text-center">
+                            <div class="col-lg-12">
                                 <div id="success"></div>
-                                <button type="submit" class="btn btn-xl">Send Message</button>
+                                <div class="button"><a href="#">Envoyer !</a></div>
                             </div>
                         </div>
                     </form>
@@ -702,7 +652,6 @@ $loisirs = $sql -> fetchAll();
     </div>
 
     <!-- jQuery -->
-
     <script src="front/vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
@@ -718,6 +667,11 @@ $loisirs = $sql -> fetchAll();
     <!-- Theme JavaScript -->
     <script src="front/js/agency.min.js"></script>
     <script src="http://rendro.github.io/easy-pie-chart/javascripts/jquery.easy-pie-chart.js"></script>
+
+    <!-- Theme parallax -->
+    <script src="front/js/parallax.js-1.4.2/parallax.js"></script>
+    <script src="front/js/parallax.js-1.4.2/parallax1.js"></script>
+
     <script src="front/js/main.js"></script>
 </body>
 

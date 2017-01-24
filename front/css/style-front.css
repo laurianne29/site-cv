@@ -1,21 +1,45 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,400);
- @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Bad+Script|Merienda|Clicker Script|Stalemate|Amita');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Bad+Script|Merienda|Amita|Cormorant+Upright');
+
+body {
+	background: #D0B1B7;
+}
 
 header {
-	background-image: url('../img/montgolfiere.jpg');
+	background-image: none;
+}
+
+.parallax-window {
+	min-height: 400px;
+	background: transparent;
+}
+
+.parallax-montgolfiere {
+	min-height: 150px;
+	background: transparent;
 }
 
 .navbar-custom .navbar-brand {
 	color: #BC2F47;
+	font-family: 'Amatic SC', cursive;
+	font-size: 3em;
+	font-weight: bold;
 	/*font-family: 'Merienda', cursive;
 	font-style: italic;*/
+}
+.navbar-custom .navbar-brand:hover {
+	color: #FFE1E9;
 }
 
   #header-nav li a{
   	  color: #BC2F47;
-  	  font-family: 'Bad Script', cursive;
+  	  font-family: 'Amatic SC', cursive;
   	  text-transform: capitalize;
-  	  font-size: 1.6em;
+  	  font-size: 2em;
+
+  }
+  #header-nav li a:hover {
+  	  color: #FFE1E9;
   }
 
 header .intro-text {
@@ -39,11 +63,63 @@ header .intro-text {
 	  color: #C9324C;
 }
 
+.section h2 .section-heading {
+	margin-top: -37px;
+}
+
 .section-heading{
 	font-family: 'Amatic SC', cursive;
 	letter-spacing: 4px;
 }
+
+.icones {
+	margin-top: 130px;
+	word-spacing: 15px;
+}
+
+.fa-github {
+	cursor: pointer;
+	color: #000
+}
+	.fa-github:hover {
+		color: snow;
+	}
+
+.fa-twitter {
+	cursor: pointer;
+	color: #1DA1F2;
+}
+	.fa-twitter:hover {
+		color: snow;
+	}
+
+.fa-linkedin {
+	cursor: pointer;
+	color: #0177B5;
+}
+	.fa-linkedin:hover {
+		color: snow;
+	}
+
+.fa-instagram {
+	cursor: pointer;
+	color: #F39848;
+}
+	.fa-instagram:hover {
+		color: snow;
+	}
+
+
 /*----------------------------------------------- PROFIL*/
+#text-profil p {
+	font-family: 'Cormorant Upright', serif;
+	font-size: 1.3em;
+}
+
+#text-profil h4 {
+	font-family: 'Cormorant Upright', serif;
+	font-size: 1.5em;
+}
 .fa-circle{
 	color: #4D3968;
 }
@@ -61,7 +137,10 @@ header .intro-text {
 }
 
 #loisirs h4 {
-	margin-top: 30px;
+	margin: 30px 0 40px;
+	font-family: 'Amatic SC', serif;
+	font-size: 2.5em;
+	letter-spacing: 4px;
 }
 
 .logo-loisir {
@@ -71,10 +150,14 @@ header .intro-text {
 	margin: 0px 18px;
 }
 /*----------------------------------------------- COMPETENCES */
-#portfolio {
+/*#portfolio {
 	/*background: #191A3F;*/
-	background: #1F2E41;
-	/*background: #230608;*/
+	/*background: #1F2E41;*/
+	/*background: #230608;
+}
+*/
+.bg-light-gray {
+	background: none;
 }
 
 #portfolio .section-heading {
@@ -136,10 +219,6 @@ header .intro-text {
   transform: translate(-50%, -50%);
 }
 
-
-
-
-
 /*----------------------------------------------- FORMATIONS / EXPERIENCES */
 #about {
 	/*background: #F0E6FF;*/
@@ -184,10 +263,9 @@ header .intro-text {
 
 
 /*----------------------------------------------- PORTFOLIO */
+
 #team {
-	/*background: #8F90CB;*/
-	/*background: #230608;*/
-	background: #892234;
+	background: none;
 }
 
 #team .section-heading {
@@ -199,23 +277,57 @@ header .intro-text {
 }
 
 /*-----------------------------------------------  ASIDE DL MON CV */
-.dl-cv {
-	background: url(../img/montgolfiere.jpg);
-	background-size: cover;
-	background-position: 30% 30%;
-	height: 80px;
+
+.dl-cv .button {
+	margin: 7px auto;
+	width: 270px;
 }
-.dl-cv button {
-	margin-top: 5px;
+.dl-cv .button a{
+	color: #fff;
+	font-family: 'Lato', sans-serif;
+	font-size: 1.5em;
 }
-.dl-cv button a{
-	color: #BC2F47;
+
+
+.button {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid #f7f7f7;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+.button:after {
+  position: absolute;
+  -webkit-transition: .3s;
+  transition: .3s;
+  content: '';
+  width: 0;
+  left: 50%;
+  bottom: 0;
+  height: 3px;
+  background: #f7f7f7;
+}
+.button:nth-of-type(2):after {
+  left: 0;
+}
+.button:hover {
+  cursor: pointer;
+}
+.button:hover:after {
+  width: 100%;
+  left: 0;
 }
 
 
 /*----------------------------------------------- CONTACT*/
 section#contact {
-	/*background-image: url('../img/contact.jpg');*/
 	animation: pulse 4s infinite;
 }
 	@keyframes pulse {
@@ -230,7 +342,22 @@ section#contact {
 		}
 	}
 
+section#contact {
+	background: none;
+}
+
 /* FORMULAIRE */
+
+section .button {
+	width: 250px;
+	font-family: 'Lato', sans-serif;
+	margin: 0 auto;
+}
+
+section .button a {
+	color: snow;
+	font-size: 1.5em;
+}
 
 section#contact .section-heading {
   color: white;

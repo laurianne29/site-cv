@@ -71,8 +71,8 @@ $(function() {
 
 /* TIMELINE EFFECT */
 // WOW
-$(function(){
+// $(function(){
 
-    new WOW().init();
-})
+//     new WOW().init();
+// })
 /* END OF TIMELINE EFFECT */

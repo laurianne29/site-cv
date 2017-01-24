@@ -207,7 +207,6 @@ fieldset[disabled] .btn-xl.active {
     border: none;
   }
   .navbar-custom .navbar-brand {
-    font-size: 2em;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
@@ -221,9 +220,9 @@ fieldset[disabled] .btn-xl.active {
     background-color: #222222;
     padding: 10px 0;
   }
-  .navbar-custom.affix .navbar-brand {
+/*  .navbar-custom.affix .navbar-brand {
     font-size: 1.5em;
-  }
+  }*/
 }
 header {
   background-image: url('../img/header-bg.jpg');
