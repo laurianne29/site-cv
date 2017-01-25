@@ -141,7 +141,7 @@ $loisirs = $sql -> fetchAll();
                 </div>
             </div>
             <div class="row" id="text-profil">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
                     <div class="timeline-heading text-left">
                         <h4>Age</h4>
                         <p> <?= $user['age'] . ' ans'; ?></p>
@@ -151,14 +151,14 @@ $loisirs = $sql -> fetchAll();
                         <p> <?= $user['tel']; ?></p>
                     </div>
                 </div>
-                <div class="col-xs-offset-3 col-lg-5">
+                <div class="col-lg-offset-3 col-lg-5 col-md-offset-3 col-md-5 col-sm-offset-3 col-sm-5 col-xs-12">
                     <div class="text-right">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo assumenda inventore impedit delectus, incidunt sapiente doloremque quam aliquid nobis debitis. Porro laborum architecto asperiores, iste accusamus at, doloremque quas recusandae.</p>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-offset-3 col-md-6">
+                <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8">
                     <div id="loisirs" class="timeline-heading text-left">
                         <h4 class="text-center">Mes intérêts</h4>
                         <div class="logo-loisir">
@@ -189,14 +189,20 @@ $loisirs = $sql -> fetchAll();
                             <ul>
                                 <li data-percent="75"><span class="text">HTML</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
                                 <li data-percent="60"><span class="text">CSS</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-                                <li data-percent="15"><span class="text">Javascript</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+                                <li data-percent="10"><span class="text">Javascript</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
                             </ul>
                         </div>
                         <div class="skills-circle">
                             <ul>
-                                <li data-percent="45"><span class="text">PHP</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
                                 <li data-percent="65"><span class="text">Bootstrap</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-                                <li data-percent="45"><span class="text">Wordpress</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+                                <li data-percent="38"><span class="text">PHP</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+                                <li data-percent="40"><span class="text">Wordpress</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+                            </ul>
+                        </div>
+                        <div class="skills-circle">
+                            <ul>
+                                <li data-percent="35"><span class="text">Ubuntu</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+                                <li data-percent="30"><span class="text">Photoshop</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
                             </ul>
                         </div>
                     </div>
@@ -215,73 +221,42 @@ $loisirs = $sql -> fetchAll();
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <ul class="timeline">
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive">
-                                <i class="fa fa-briefcase fa-4x" aria-hidden="true"></i>
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4><?= $experiences[0]['dates'] ?></h4>
+                    <section class="timeline">
+                        <ul>
+                            <li>
+                                <div>
+                                    <time class="text-uppercase"><?= $experiences[0]['dates'] ?></time>
                                     <h4 class="subheading"><?= $experiences[0]['experience']; ?></h4>
-                                </div>
-                                <div class="timeline-body">
                                     <p class="text-muted"><?= $experiences[0]['taches'] ?></p>
+                                    <span>Ville</span>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive">
-                                <i class="fa fa-graduation-cap fa-4x" aria-hidden="true"></i>
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4><?= $formations[0]['dates_formation'] ?></h4>
+                            </li>
+                            <li>
+                                <div>
+                                    <time class="text-uppercase"><?= $formations[0]['dates_formation'] ?></time>
                                     <h4 class="subheading"><?= $formations[0]['formation']; ?></h4>
-                                </div>
-                                <div class="timeline-body">
                                     <p class="text-muted"><?= $formations[0]['description'] ?></p>
+                                    <span>Ville</span>
                                 </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive">
-                                <i class="fa fa-briefcase fa-4x" aria-hidden="true"></i>
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4><?= $experiences[1]['dates'] ?></h4>
-                                    <h4 class="subheading"><?= $experiences[1]['experience']; ?></h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted"><?= $experiences[1]['taches']; ?></p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive">
-                                <i class="fa fa-graduation-cap fa-4x" aria-hidden="true"></i>
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4><?= $formations[1]['dates_formation'] ?></h4>
+                            </li>
+                            <li>
+                                <div>
+                                    <time class="text-uppercase"><?= $formations[1]['dates_formation'] ?></time>
                                     <h4 class="subheading"><?= $formations[1]['formation'] ?></h4>
-                                </div>
-                                <div class="timeline-body">
                                     <p class="text-muted"><?= $formations[1]['description'] ?></p>
+                                    <span>Ville</span>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <h4>À suivre...</h4>
-                            </div>
-                        </li>
-                    </ul>
+                            </li>
+                            <li>
+                                <div>
+                                    <time class="text-uppercase"><?= $experiences[1]['dates'] ?></time>
+                                    <h4 class="subheading"><?= $experiences[1]['experience']; ?></h4>
+                                    <p class="text-muted"><?= $experiences[1]['taches']; ?></p>
+                                    <span>Ville</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
                 </div>
             </div>
         </div>
@@ -391,7 +366,7 @@ $loisirs = $sql -> fetchAll();
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <div class="button"><a href="#">-> MON CV PAPIER <-</a></div>
+                        <div class="button"><a href="front/img/cv_laurianne.pdf" target="_blank">MON CV PAPIER</a></div>
                     </div>
                 </div>
             </div>
@@ -673,6 +648,7 @@ $loisirs = $sql -> fetchAll();
     <script src="front/js/parallax.js-1.4.2/parallax1.js"></script>
 
     <script src="front/js/main.js"></script>
+    <script src="front/js/timeline.js"></script>
 </body>
 
 </html>

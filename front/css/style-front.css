@@ -120,6 +120,14 @@ header .intro-text {
 	font-family: 'Cormorant Upright', serif;
 	font-size: 1.5em;
 }
+
+@media screen and (min-width: 200px) and(max-width: 480px) {
+  #text-profil {
+  	text-align: center;
+  }
+
+}
+
 .fa-circle{
 	color: #4D3968;
 }
@@ -226,41 +234,142 @@ header .intro-text {
 	background: #D0B1B7;
 }
 
-.timeline > li .timeline-image {
-	width: 100px;
-	height: 100px;
-	margin-left: -50px;
-	border: 3px solid snow;
+/**** TIMELINE ****/
+.timeline ul {
+  padding: 50px 0;
 }
 
-.timeline > li .timeline-image > h4 {
-	margin-top: 12px; 
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 2px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #fff;
 }
 
-.fa-graduation-cap {
-	margin-top: 15px;
-}
-.fa-briefcase {
-	margin-top: 15px;
+.timeline ul li .text-muted {
+	color: snow;
 }
 
-.timeline li .timeline-panel:hover {
-	background: #eee;
-	box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.2);
-	border-radius: 5px;
+.timeline ul li::after {
+  content: url("../img/logos/school.png");
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+/*  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: inherit;*/
 }
 
-.timeline li .timeline-panel {
-	line-height: 40px;
-	margin-right: 100px;
-	margin-left: 100px;
-	width: 30%;
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 15px;
+  background: #F45B69;
 }
 
-.timeline-heading {
-	margin-top: 15px; 
+.timeline ul li div::before {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
 }
 
+.timeline ul li:nth-child(even) div {
+  left: 45px;
+}
+
+.timeline ul li:nth-child(even) div::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #F45B69 transparent transparent;
+}
+
+.timeline ul li:nth-child(odd) div {
+  left: -470px;
+}
+
+.timeline ul li:nth-child(odd) div::before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent #F45B69;
+}
+
+time {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+
+/* EFFECTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul li::after {
+  transition: background .5s ease-in-out;
+}
+
+/*.timeline ul li.in-view::after {
+  background: #F45B69;
+}*/
+
+.timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.timeline ul li:nth-child(even) div {
+  transform: translate3d(200px, 0, 0);
+}
+
+.timeline ul li:nth-child(odd) div {
+  transform: translate3d(-200px, 0, 0);
+}
+
+.timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 900px) {
+  .timeline ul li div {
+    width: 250px;
+  }
+  .timeline ul li:nth-child(odd) div {
+    left: -289px;
+    /*250+45-6*/
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li div {
+    width: calc(100vw - 91px);
+  }
+  .timeline ul li:nth-child(odd) div {
+    left: 45px;
+  }
+  .timeline ul li:nth-child(odd) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #F45B69 transparent transparent;
+  }
+}
 
 /*----------------------------------------------- PORTFOLIO */
 
@@ -281,20 +390,25 @@ header .intro-text {
 .dl-cv .button {
 	margin: 7px auto;
 	width: 270px;
-}
-.dl-cv .button a{
-	color: #fff;
 	font-family: 'Lato', sans-serif;
 	font-size: 1.5em;
 }
-
+.dl-cv .button a {
+	padding: 20px;
+	display: block;
+	text-decoration: none;
+	color: #BC2F41;
+}
+.dl-cv .button a:hover {
+	text-decoration: none;
+	color: snow;
+}
 
 .button {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin: 10px;
-  padding: 20px;
   border: 2px solid #f7f7f7;
   text-align: center;
   text-transform: uppercase;
@@ -357,6 +471,14 @@ section .button {
 section .button a {
 	color: snow;
 	font-size: 1.5em;
+	padding: 20px;
+	display: block;
+	color: #D0B1B7;
+}
+
+section .button a:hover {
+	text-decoration: none;
+	color: #BC2F41;
 }
 
 section#contact .section-heading {
