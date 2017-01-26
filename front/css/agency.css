@@ -220,9 +220,6 @@ fieldset[disabled] .btn-xl.active {
     background-color: #222222;
     padding: 10px 0;
   }
-/*  .navbar-custom.affix .navbar-brand {
-    font-size: 1.5em;
-  }*/
 }
 header {
   background-image: url('../img/header-bg.jpg');
@@ -255,7 +252,7 @@ header .intro-text .intro-heading {
   line-height: 50px;
   margin-bottom: 25px;
 }
-@media (min-width: 768px) {
+@media (min-width: 740px) {
   header .intro-text {
     padding-top: 300px;
     padding-bottom: 200px;
@@ -276,6 +273,7 @@ header .intro-text .intro-heading {
     margin-bottom: 50px;
   }
 }
+
 section {
   padding: 100px 0;
 }

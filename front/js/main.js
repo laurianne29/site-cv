@@ -1,16 +1,6 @@
-/*init charts*/
-$(function() {
-  $('.chart').easyPieChart({
-    scaleColor: "#ecf0f1",
-    lineWidth: 5,
-    lineCap: 'butt',
-    barColor: '#1abc9c',
-    trackColor:	"#ecf0f1",
-    size: 160,
-    animate: 500
-  });
-});
-/*end of init charts*/
+/*LOADER*/
+
+/*FIN DU LOADER*/
 
 /*fonctions Charts -- codePen*/
 (function () {
@@ -66,13 +56,3 @@ $(function() {
         });
     });
 }.call(this));
-
-/*End of Charts codepen*/
-
-/* TIMELINE EFFECT */
-// WOW
-// $(function(){
-
-//     new WOW().init();
-// })
-/* END OF TIMELINE EFFECT */

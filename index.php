@@ -31,7 +31,7 @@ $loisirs = $sql -> fetchAll();
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Laurianne Michelot</title>
+    <title> </title>
     
     <!-- Bootstrap Core CSS -->
     <link href="front/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -54,10 +54,11 @@ $loisirs = $sql -> fetchAll();
     <![endif]-->
 
     <link href="front/css/style-front.css" rel="stylesheet">
-
 </head>
 
 <body id="page-top" class="index">
+
+    <!-- LOADER AVANT DE CHARGER LA PAGE -->
 
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
@@ -67,7 +68,7 @@ $loisirs = $sql -> fetchAll();
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll text-uppercase" href="#page-top">mon site cv</a>
+                <a class="navbar-brand page-scroll text-uppercase" href="#page-top">laurianne.m</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -83,7 +84,7 @@ $loisirs = $sql -> fetchAll();
                         <a class="page-scroll" href="#portfolio">Compétences</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">Experiences & Formations</a>
+                        <a class="page-scroll" href="#about">Expériences & Formations</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#team">Portfolio</a>
@@ -137,11 +138,11 @@ $loisirs = $sql -> fetchAll();
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <img class="img-circle img-responsive img-profil" src="front/img/maison.jpeg">
+                    <img class="img-circle img-responsive img-profil" src="front/img/autumn.jpg">
                 </div>
             </div>
             <div class="row" id="text-profil">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="timeline-heading text-left">
                         <h4>Age</h4>
                         <p> <?= $user['age'] . ' ans'; ?></p>
@@ -152,7 +153,7 @@ $loisirs = $sql -> fetchAll();
                     </div>
                 </div>
                 <div class="col-lg-offset-3 col-lg-5 col-md-offset-3 col-md-5 col-sm-offset-3 col-sm-5 col-xs-12">
-                    <div class="text-right">
+                    <div class="description text-right">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo assumenda inventore impedit delectus, incidunt sapiente doloremque quam aliquid nobis debitis. Porro laborum architecto asperiores, iste accusamus at, doloremque quas recusandae.</p>
                     </div>
                 </div>
@@ -386,21 +387,21 @@ $loisirs = $sql -> fetchAll();
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
+                                    <input type="text" class="form-control" placeholder="Votre nom et prénom *" id="name" required data-validation-required-message="Please enter your name.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
+                                    <input type="email" class="form-control" placeholder="Votre Email *" id="email" required data-validation-required-message="Please enter your email address.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                    <input type="tel" class="form-control" placeholder="Votre numéro de téléphone *" id="phone" required data-validation-required-message="Please enter your phone number.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <textarea class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                    <textarea class="form-control" placeholder="Votre message *" id="message" required data-validation-required-message="S'il-vous-plaît entrez un message"></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
@@ -420,13 +421,13 @@ $loisirs = $sql -> fetchAll();
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Your Website 2016</span>
+                    <span class="copyright">Copyright &copy; Laurianne Michelot</span>
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
                         <li><a href="#"><i class="fa fa-twitter"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        <li><a href="#"><i class="fa fa-github"></i></a>
                         </li>
                         <li><a href="#"><i class="fa fa-linkedin"></i></a>
                         </li>
@@ -649,6 +650,7 @@ $loisirs = $sql -> fetchAll();
 
     <script src="front/js/main.js"></script>
     <script src="front/js/timeline.js"></script>
+
 </body>
 
 </html>

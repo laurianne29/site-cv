@@ -1,5 +1,6 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:100,400);
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Bad+Script|Merienda|Amita|Cormorant+Upright');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Bad+Script|Merienda|Amita|Cormorant+Upright|Lato:100,400');
+
+
 
 body {
 	background: #D0B1B7;
@@ -7,6 +8,17 @@ body {
 
 header {
 	background-image: none;
+}
+ 
+.loader {
+	position : fixed;
+	z-index: 9999;
+	background : url('icon-loader.gif') 50% 50% no-repeat;
+	top : 0px;
+	left : 0px;
+	height : 100%;
+	width : 100%;
+	cursor : wait;
 }
 
 .parallax-window {
@@ -24,9 +36,8 @@ header {
 	font-family: 'Amatic SC', cursive;
 	font-size: 3em;
 	font-weight: bold;
-	/*font-family: 'Merienda', cursive;
-	font-style: italic;*/
 }
+
 .navbar-custom .navbar-brand:hover {
 	color: #FFE1E9;
 }
@@ -36,8 +47,8 @@ header {
   	  font-family: 'Amatic SC', cursive;
   	  text-transform: capitalize;
   	  font-size: 2em;
-
   }
+
   #header-nav li a:hover {
   	  color: #FFE1E9;
   }
@@ -45,19 +56,57 @@ header {
 header .intro-text {
 	margin-bottom: 30px;
 }
-  header .intro-text .intro-heading {
-  	  font-family: 'Amatic SC', cursive;
+ header .intro-text .intro-heading {
+	  font-family: 'Amatic SC', cursive;
 	  text-transform: capitalize;
 	  font-size: 6.5em;
 	  font-weight: lighter;
-  }
-  header .intro-text .intro-lead-in {
-  	  font-family: 'Amatic SC', cursive;
-  	  font-style: normal;
-  	  letter-spacing: 5px;
-  	  font-size: 3.2em;
-  }
+} 
+   header .intro-text .intro-lead-in {
+	  font-family: 'Amatic SC', cursive;
+	  font-style: normal;
+	  letter-spacing: 5px;
+	  font-size: 3.2em;
+}
+	/* MOBILE PORTRAIT & MOBILE PAYSAGE */
+	 @media screen and (max-width: 600px) {
+	 	header .intro-text .intro-heading{
+			font-size: 3.5em;
+	 	}
 
+	 	header .intro-text .intro-lead-in {
+	 		font-size: 2em;
+	 	}
+	}
+	/* MOBILE PAYSAGE + PETITE TABLETTE PORTRAIT*/
+	@media screen and (min-width: 528px){
+	 	header .intro-text .intro-heading{
+			font-size: 4em;
+	 	}
+
+	 	header .intro-text .intro-lead-in {
+	 		font-size: 2em;
+	 	}
+	}
+	/* GRANDE TABLETTE PORTRAIT */
+	@media screen and (min-width: 768px) {
+		header .intro-text .intro-heading {
+			font-size: 5em;
+		}
+		header .intro-text .intro-lead-in {
+	 		font-size: 3em;
+	 	}
+	}
+	/* GRANDE TABLETTE PAYSAGE + ORDI */
+	@media screen and (min-width: 992px) {
+		header .intro-text .intro-heading {
+			font-size: 6em;
+		}
+		header .intro-text .intro-lead-in {
+	 		font-size: 3.2em;
+	 	}
+	}
+ 
 .fa-angle-double-down {
 	  margin-top: 120px;
 	  color: #C9324C;
@@ -121,20 +170,24 @@ header .intro-text {
 	font-size: 1.5em;
 }
 
-@media screen and (min-width: 200px) and(max-width: 480px) {
-  #text-profil {
-  	text-align: center;
-  }
 
-}
+	/* MOBILE PORTRAIT & MOBILE PAYSAGE */
+	 @media screen and (max-width: 768px) {
+	 	#text-profil .timeline-heading{
+			text-align: center;
+	 	}
+	 	#text-profil .description {
+	 		margin-top: 15px;
+	 		text-align: center;
+	 	}
+	}
+	
 
 .fa-circle{
 	color: #4D3968;
 }
 
 #services {
-	/*background: #F0E6FF;*/
-	/*background: #B0C7D8;*/
 	background: #D0B1B7;
 }
 
@@ -158,12 +211,7 @@ header .intro-text {
 	margin: 0px 18px;
 }
 /*----------------------------------------------- COMPETENCES */
-/*#portfolio {
-	/*background: #191A3F;*/
-	/*background: #1F2E41;*/
-	/*background: #230608;
-}
-*/
+
 .bg-light-gray {
 	background: none;
 }
@@ -343,6 +391,11 @@ time {
 
 /* GENERAL MEDIA QUERIES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 740px) {
+  header .text-heading {
+    font-size: 10px;
+  }
+}
 
 @media screen and (max-width: 900px) {
   .timeline ul li div {
