@@ -1,16 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Bad+Script|Merienda|Amita|Cormorant+Upright|Lato:100,400');
-
-
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Bad+Script|Merienda|Amita|Cormorant+Upright|Lato:100,400|Arima+Madurai|Overlock');
 
 body {
 	background: #D0B1B7;
 }
 
+html {
+	font-size: 65.5%;
+}
+
 header {
 	background-image: none;
 }
- 
-.loader {
+
+/************************************************************* LOADER ************************/
+/*.loader {
 	position : fixed;
 	z-index: 9999;
 	background : url('icon-loader.gif') 50% 50% no-repeat;
@@ -19,8 +22,11 @@ header {
 	height : 100%;
 	width : 100%;
 	cursor : wait;
-}
+}*/
+/************************************************************* FIN DU LOADER *****************/
 
+
+/************************************************************* PARALLAX **********************/
 .parallax-window {
 	min-height: 400px;
 	background: transparent;
@@ -30,6 +36,9 @@ header {
 	min-height: 150px;
 	background: transparent;
 }
+/************************************************************* FIN DU PARALLAX ****************/
+
+/************************************************************* NAVBAR *************************/
 
 .navbar-custom .navbar-brand {
 	color: #BC2F47;
@@ -52,21 +61,23 @@ header {
   #header-nav li a:hover {
   	  color: #FFE1E9;
   }
+/************************************************************* FIN NAVBAR *************************/
 
+/************************************************************* TITRE + SOUS-TITRE *****************/
 header .intro-text {
 	margin-bottom: 30px;
 }
- header .intro-text .intro-heading {
-	  font-family: 'Amatic SC', cursive;
-	  text-transform: capitalize;
-	  font-size: 6.5em;
-	  font-weight: lighter;
+header .intro-text .intro-heading {
+	font-family: 'Amatic SC', cursive;
+	text-transform: capitalize;
+	font-size: 6.5em;
+font-weight: lighter;
 } 
-   header .intro-text .intro-lead-in {
-	  font-family: 'Amatic SC', cursive;
-	  font-style: normal;
-	  letter-spacing: 5px;
-	  font-size: 3.2em;
+header .intro-text .intro-lead-in {
+	font-family: 'Amatic SC', cursive;
+	font-style: normal;
+	letter-spacing: 5px;
+	font-size: 3.2em;
 }
 	/* MOBILE PORTRAIT & MOBILE PAYSAGE */
 	 @media screen and (max-width: 600px) {
@@ -121,6 +132,7 @@ header .intro-text {
 	letter-spacing: 4px;
 }
 
+/************************************************************** ICONES RESEAUX SOCIAUX *************/
 .icones {
 	margin-top: 130px;
 	word-spacing: 15px;
@@ -157,16 +169,16 @@ header .intro-text {
 	.fa-instagram:hover {
 		color: snow;
 	}
+/************************************************************** FIN DES ICONES ********************/
 
-
-/*----------------------------------------------- PROFIL*/
+/************************************************************** PROFIL ****************************/
 #text-profil p {
-	font-family: 'Cormorant Upright', serif;
+	font-family: 'Overlock', serif;
 	font-size: 1.3em;
 }
 
 #text-profil h4 {
-	font-family: 'Cormorant Upright', serif;
+	font-family: 'Overlock', serif;
 	font-size: 1.5em;
 }
 
@@ -197,83 +209,95 @@ header .intro-text {
 	margin: 0 auto 20px;
 }
 
-#loisirs h4 {
+.logo-loisir p {
+	font-size: 0.8em;
+}
+
+.titre-interet {
 	margin: 30px 0 40px;
 	font-family: 'Amatic SC', serif;
 	font-size: 2.5em;
 	letter-spacing: 4px;
 }
 
-.logo-loisir {
-	display: inline-block;
-}
 .logo-loisir img {
 	margin: 0px 18px;
 }
 /*----------------------------------------------- COMPETENCES */
 
-.bg-light-gray {
-	background: none;
-}
-
-#portfolio .section-heading {
+#portfolio .container h3:nth-child(2n+1) {
+	font-family: 'Overlock', sans-serif;
+	text-transform: capitalize;
 	color: #D8CD81;
 }
 
-.skill-box > .skills-circle > ul {
-  padding: 0;
-  text-align: center;
-  list-style-type: none;
+#portfolio .container h2 {
+	color: #D8CD81;
 }
-.skill-box > .skills-circle > ul > li {
-  width: 150px;
-  height: 150px;
-  background-color: #ddd;
-  border-radius: 50%;
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  margin: 40px 50px;
-}
-.skill-box > .skills-circle > ul > li > span {
-  color: #7a7;
-}
-.skill-box > .skills-circle > ul > li > span.text, .skill-box > .skills-circle > ul > li > span ~ b {
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  margin-top: -8px;
-  z-index: 1;
-}
-.skill-box > .skills-circle > ul > li > span.text ~ b, .skill-box > .skills-circle > ul > li > span ~ b ~ b {
-  font-weight: normal;
-  margin-top: 8px;
-}
-.skill-box > .skills-circle > ul > li > span.bar-circle-right, .skill-box > .skills-circle > ul > li > span.bar-circle-left {
-  border-radius: 50%;
-  position: absolute;
-  display: block;
+
+.icon {
   width: 100%;
   height: 100%;
-  background: #B0DAB9;
-  clip: rect(0, 75px, 150px, 0);
 }
-.skill-box > .skills-circle > ul > li > span.bar-circle-left {
-  background: #ddd;
+.o-progress-circle {
+  display: inline-block;
+  position: relative;
+  width: 150px;
+  height: 180px;
 }
-.skill-box > .skills-circle > ul > li > span.bar-circle-cover {
-  display: block;
-  width: 88%;
-  height: 88%;
-  border-radius: 50%;
-  background-color: #eee;
-  z-index: 0;
+.o-progress-circle__fill circle {
+  fill: none;
+  stroke-width: 1px;
+  stroke: #53b7ba;
+}
+.o-progress-circle__fill circle:nth-child(2) {
+  animation: load-circle 1s;
+  stroke: #ace0e2;
+  stroke-dasharray: 100;
+}
+.o-progress-circle__number {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: inline-block;
+  margin: auto;
+  height: 10rem;
+  width: 100%;
+  font-family: arial, sans-serif;
+  color: rgba(255,0,0,0.5);
+  font-size: 3rem;
+  text-align: center;
 }
+.o-progress-circle__number em {
+  font-weight: 100;
+  font-style: normal;
+}
+.o-progress-circle--rounded circle:nth-child(2) {
+  stroke-linecap: round;
+}
+@-moz-keyframes load-circle {
+  0% {
+    stroke-dashoffset: 100;
+  }
+}
+@-webkit-keyframes load-circle {
+  0% {
+    stroke-dashoffset: 100;
+  }
+}
+@-o-keyframes load-circle {
+  0% {
+    stroke-dashoffset: 100;
+  }
+}
+@keyframes load-circle {
+  0% {
+    stroke-dashoffset: 100;
+  }
+}
+
 
 /*----------------------------------------------- FORMATIONS / EXPERIENCES */
 #about {

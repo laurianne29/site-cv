@@ -159,15 +159,32 @@ $loisirs = $sql -> fetchAll();
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8">
-                    <div id="loisirs" class="timeline-heading text-left">
-                        <h4 class="text-center">Mes intérêts</h4>
-                        <div class="logo-loisir">
+                <div class="col-lg-12">
+                    <h4 class="text-center titre-interet">Mes intérêts</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="logo-loisir text-center">
+                        <div class="col-md-2">
                             <img src="front/img/logos/html.png" alt="logo code" width="70">
+                            <p>Coder et me mettre à jour sur les nouvelles technologies et nouveaux langages web.</p>
+                        </div>
+                        <div class="col-md-2">
                             <img src="front/img/logos/music.png" alt="logo guitare" width="70">
+                            <p>Guitare, piano, batterie... Je ne peux pas vivre sans musique !</p>
+                        </div>
+                        <div class="col-md-2">
                             <img src="front/img/logos/cat.png" alt="logo chat" width="70">
+                            <p>Mon chat, toujours à mes côtés quand je travaille !</p>
+                        </div>
+                        <div class="col-md-2">
                             <img src="front/img/logos/travel-1.png" alt="logo voyage" width="70">
+                            <p>Pérou, République-Tchèque, Ecosse, Angleterre, Italie... Voyager c'est se former sa propre bibliothèque.</p>
+                        </div>
+                        <div class="col-md-2">
                             <img src="front/img/logos/telescope.png" alt="logo telescope" width="70">
+                            <p>Observer l'infiniment grand et voyager entre les constellations à travers la lunette de mon télescope...</p>
                         </div>
                     </div>
                 </div>
@@ -177,34 +194,142 @@ $loisirs = $sql -> fetchAll();
 
     <!-- SECTION COMPETENCES -->
     <div class="parallax-window" data-parallax="scroll" data-image-src="front/img/montgolfiere.jpg">
-        <section id="portfolio" class="bg-light-gray">
-            <div class='container'>
+        <section id="portfolio">
+            <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <h2 class="section-heading text-center">Compétences</h2>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="skill-box">
-                        <div class="skills-circle">
-                            <ul>
-                                <li data-percent="75"><span class="text">HTML</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-                                <li data-percent="60"><span class="text">CSS</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-                                <li data-percent="10"><span class="text">Javascript</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-                            </ul>
+                    <div class="col-md-offset-2 col-md-2 text-center">
+                        <div class="col-md-12">
+                            <h3 class="text-center">HTML</h3>
                         </div>
-                        <div class="skills-circle">
-                            <ul>
-                                <li data-percent="65"><span class="text">Bootstrap</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-                                <li data-percent="38"><span class="text">PHP</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-                                <li data-percent="40"><span class="text">Wordpress</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-                            </ul>
+                        <div class="o-progress-circle o-progress-circle--rounded">
+                            <div class="o-progress-circle__number">
+                                <span data-pourcent>75</span><em>%</em>
+                            </div>
+                            <div class="o-progress-circle__fill">
+                                <svg class="icon" viewBox="0 0 40 40">
+                                    <circle r="15.9154943092" cy="20" cx="20" />
+                                    <circle r="15.9154943092" cy="20" cx="20" stroke-dashoffset="25" transform="rotate(-90,20,20)" />
+                                </svg>
+                            </div>
                         </div>
-                        <div class="skills-circle">
-                            <ul>
-                                <li data-percent="35"><span class="text">Ubuntu</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-                                <li data-percent="30"><span class="text">Photoshop</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-                            </ul>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="col-md-12">
+                            <h3 class="text-center">CSS</h3>
+                        </div>
+                        <div class="o-progress-circle o-progress-circle--rounded">
+                            <div class="o-progress-circle__number">
+                                <span data-pourcent>68</span><em>%</em>
+                            </div>
+                            <div class="o-progress-circle__fill">
+                                <svg class="icon" viewBox="0 0 40 40">
+                                    <circle r="15.9154943092" cy="20" cx="20" />
+                                    <circle r="15.9154943092" cy="20" cx="20" stroke-dashoffset="32" transform="rotate(-90,20,20)" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="col-md-12">
+                            <h3 class="text-center">Bootstrap</h3>
+                        </div>
+                        <div class="o-progress-circle o-progress-circle--rounded">
+                            <div class="o-progress-circle__number">
+                                <span data-pourcent>80</span><em>%</em>
+                            </div>
+                            <div class="o-progress-circle__fill">
+                                <svg class="icon" viewBox="0 0 40 40">
+                                    <circle r="15.9154943092" cy="20" cx="20" />
+                                    <circle r="15.9154943092" cy="20" cx="20" stroke-dashoffset="20" transform="rotate(-90,20,20)" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="col-md-12">
+                            <h3 class="text-center">Javascript</h3>
+                        </div>
+                        <div class="o-progress-circle o-progress-circle--rounded">
+                            <div class="o-progress-circle__number">
+                                <span data-pourcent>10</span><em>%</em>
+                            </div>
+                            <div class="o-progress-circle__fill">
+                                <svg class="icon" viewBox="0 0 40 40">
+                                    <circle r="15.9154943092" cy="20" cx="20" />
+                                    <circle r="15.9154943092" cy="20" cx="20" stroke-dashoffset="90" transform="rotate(-90,20,20)" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-2 text-center">
+                        <div class="col-md-12">
+                            <h3 class="text-center">PHP</h3>
+                        </div>
+                        <div class="o-progress-circle o-progress-circle--rounded">
+                            <div class="o-progress-circle__number">
+                                <span data-pourcent>48</span><em>%</em>
+                            </div>
+                            <div class="o-progress-circle__fill">
+                                <svg class="icon" viewBox="0 0 40 40">
+                                    <circle r="15.9154943092" cy="20" cx="20" />
+                                    <circle r="15.9154943092" cy="20" cx="20" stroke-dashoffset="52" transform="rotate(-90,20,20)" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="col-md-12">
+                            <h3 class="text-center">Wordpress</h3>
+                        </div>
+                        <div class="o-progress-circle o-progress-circle--rounded">
+                            <div class="o-progress-circle__number">
+                                <span data-pourcent>50</span><em>%</em>
+                            </div>
+                            <div class="o-progress-circle__fill">
+                                <svg class="icon" viewBox="0 0 40 40">
+                                    <circle r="15.9154943092" cy="20" cx="20" />
+                                    <circle r="15.9154943092" cy="20" cx="20" stroke-dashoffset="50" transform="rotate(-90,20,20)" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="col-md-12">
+                            <h3 class="text-center">Photoshop</h3>
+                        </div>
+                        <div class="o-progress-circle o-progress-circle--rounded">
+                            <div class="o-progress-circle__number">
+                                <span data-pourcent>30</span><em>%</em>
+                            </div>
+                            <div class="o-progress-circle__fill">
+                                <svg class="icon" viewBox="0 0 40 40">
+                                    <circle r="15.9154943092" cy="20" cx="20" />
+                                    <circle r="15.9154943092" cy="20" cx="20" stroke-dashoffset="60" transform="rotate(-90,20,20)" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="col-md-12">
+                            <h3 class="text-center">Ubuntu</h3>
+                        </div>
+                        <div class="o-progress-circle o-progress-circle--rounded">
+                            <div class="o-progress-circle__number">
+                                <span data-pourcent>35</span><em>%</em>
+                            </div>
+                            <div class="o-progress-circle__fill">
+                                <svg class="icon" viewBox="0 0 40 40">
+                                    <circle r="15.9154943092" cy="20" cx="20" />
+                                    <circle r="15.9154943092" cy="20" cx="20" stroke-dashoffset="65" transform="rotate(-90,20,20)" />
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
