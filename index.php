@@ -166,7 +166,7 @@ $loisirs = $sql -> fetchAll();
             <div class="row">
                 <div class="col-md-12">
                     <div class="logo-loisir text-center">
-                        <div class="col-md-2">
+                        <div class="col-md-offset-1 col-md-2">
                             <img src="front/img/logos/html.png" alt="logo code" width="70">
                             <p>Coder et me mettre à jour sur les nouvelles technologies et nouveaux langages web.</p>
                         </div>
@@ -184,7 +184,7 @@ $loisirs = $sql -> fetchAll();
                         </div>
                         <div class="col-md-2">
                             <img src="front/img/logos/telescope.png" alt="logo telescope" width="70">
-                            <p>Observer l'infiniment grand et voyager entre les constellations à travers la lunette de mon télescope...</p>
+                            <p>Observer l'infiniment grand et voyager entre les constellations à travers mon télescope...</p>
                         </div>
                     </div>
                 </div>
