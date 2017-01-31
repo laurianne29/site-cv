@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 17 Janvier 2017 à 17:02
+-- Généré le :  Lun 30 Janvier 2017 à 16:53
 -- Version du serveur :  10.1.8-MariaDB
 -- Version de PHP :  5.6.14
 
@@ -40,7 +40,8 @@ INSERT INTO `competences` (`id_competence`, `competence`, `niveau`) VALUES
 (1, 'HTML/CSS', 'Intermédiaire'),
 (2, 'Wordpress', 'Débutant'),
 (5, 'Javascript', 'Notions'),
-(9, 'PHP', 'Notions');
+(9, 'PHP', 'Notions'),
+(11, 'Bootstrap', 'Intermédiaire');
 
 -- --------------------------------------------------------
 
@@ -62,7 +63,9 @@ CREATE TABLE `experiences` (
 --
 
 INSERT INTO `experiences` (`id_experience`, `experience`, `taches`, `lieu`, `dates`, `id_competence`) VALUES
-(2, 'Développeuse / intégratrice WEB', '<h3><a href="http://www.google.fr" target="_blank">Int&eacute;gration de sites web</a><strong> - <em>Villeneuve-la-garenne</em></strong></h3>\r\n', 'Villeneuve-la-Garenne', '18/07/2016 - 18/05/2017', 0);
+(1, 'Stagiaire au sein du service informatique', 'Stage d''observation de 3ème à Six Telekurs', 'Nanterre', 'Juin 2012', 0),
+(2, 'Développeuse / intégratrice web junior', 'Intégration de sites web au sein du PoleS', 'Villeneuve-la-Garenne', 'Juillet 2016 - mai 2017', 0),
+(5, 'Stage d''intégrateur web', 'Intégration de site web...', 'Villeneuve-la-Garenne', '15/03/2017 - 15/05/2017', 0);
 
 -- --------------------------------------------------------
 
@@ -74,16 +77,39 @@ CREATE TABLE `formation` (
   `id_formation` int(11) NOT NULL,
   `formation` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL,
-  `dates_formation` varchar(255) NOT NULL
+  `dates_formation` varchar(255) NOT NULL,
+  `lieu` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `formation`
 --
 
-INSERT INTO `formation` (`id_formation`, `formation`, `description`, `dates_formation`) VALUES
-(1, 'WF3', 'Formation de développeur / intégrateur WEB avec WF3', '01/09/2016 - 15/01/2017'),
-(3, 'Baccalauréat Littéraire', 'Niveau BAC - Lycée Auguste Renoir', '2012-2015');
+INSERT INTO `formation` (`id_formation`, `formation`, `description`, `dates_formation`, `lieu`) VALUES
+(1, 'Baccalauréat Littéraire', 'Niveau BAC - Lycée Auguste Renoir', '2012-2015', 'Asnières-sur-Seine'),
+(2, 'WF3', 'Formation de développeur / intégrateur WEB : acquisition de plusieurs langages et pratique web tel que le HTML / CSS, PHP, Javascript, framework (W), Bootstrap...', '01/09/2016 - 15/01/2017', 'Villeneuve-la-Garenne');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `langues`
+--
+
+CREATE TABLE `langues` (
+  `id_langues` int(11) NOT NULL,
+  `langue` varchar(255) NOT NULL,
+  `niveau` enum('notions','bon','très bon','courant','langue maternelle') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `langues`
+--
+
+INSERT INTO `langues` (`id_langues`, `langue`, `niveau`) VALUES
+(1, 'Français', 'langue maternelle'),
+(2, 'Espagnol', 'très bon'),
+(3, 'Anglais', 'bon'),
+(4, 'Allemand', 'notions');
 
 -- --------------------------------------------------------
 
@@ -97,6 +123,17 @@ CREATE TABLE `loisirs` (
   `loisir` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Contenu de la table `loisirs`
+--
+
+INSERT INTO `loisirs` (`id_loisir`, `titre_loisir`, `loisir`) VALUES
+(1, 'Musique', 'Guitare & batterie (association YouRock!) et le piano.'),
+(2, 'Numérique', ''),
+(3, 'Voyages', ''),
+(4, 'Photographie', ''),
+(5, 'Astronomie', '');
+
 -- --------------------------------------------------------
 
 --
@@ -109,6 +146,13 @@ CREATE TABLE `titre` (
   `accroche` text NOT NULL,
   `logo` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `titre`
+--
+
+INSERT INTO `titre` (`id_titre`, `titre_cv`, `accroche`, `logo`) VALUES
+(1, 'Développeuse / intégratrice WEB JUNIOR', '"La logique te mènera d''un point A à un point B, alors que l''imagination t''emmènera n''importe où"', '');
 
 -- --------------------------------------------------------
 
@@ -133,17 +177,16 @@ CREATE TABLE `user` (
   `code_postal` varchar(5) NOT NULL,
   `ville` varchar(32) NOT NULL,
   `pays` varchar(25) NOT NULL,
-  `notes` text NOT NULL
+  `notes` text NOT NULL,
+  `poste` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `user`
 --
 
-INSERT INTO `user` (`id_user`, `nom`, `prenom`, `email`, `tel`, `mdp`, `pseudo`, `avatar`, `age`, `sexe`, `etat_civil`, `statut`, `adresse`, `code_postal`, `ville`, `pays`, `notes`) VALUES
-(1, 'Michelot', 'Laurianne', 'lauriannemichelot@gmail.com', '06 99 90 37 85', '123456', 'killa', 'hp.png', 19, 'femme', 'Mlle', 'Célibataire', '7, villa Jean Charles', '92600', 'Asnières-sur-Seine', 'France', ''),
-(2, 'Snape', 'Severus', 'sevy@gmail.com', '07 85 31 64 25', '123', 'sevy', '', 38, 'homme', 'M.', 'Célibataire', '', '', 'London', 'England', ''),
-(3, 'Lovegood', 'Luna', 'lunaweird@gmail.com', '06 99 35 64 85', '123456', 'luna', 'luna.jpg', 21, '', 'Mlle', 'Célibataire', '15 avenue Mcqueen', '62354', 'London', 'Angleterre', '');
+INSERT INTO `user` (`id_user`, `nom`, `prenom`, `email`, `tel`, `mdp`, `pseudo`, `avatar`, `age`, `sexe`, `etat_civil`, `statut`, `adresse`, `code_postal`, `ville`, `pays`, `notes`, `poste`) VALUES
+(1, 'Michelot', 'Laurianne', 'lauriannemichelot@gmail.com', '06 99 90 37 85', '123456', 'killa', 'hp.png', 19, 'femme', 'Mlle', 'Célibataire', '7, villa Jean Charles', '92600', 'Asnières-sur-Seine', 'France', '', 'Développeuse / Intégratrice WEB');
 
 --
 -- Index pour les tables exportées
@@ -166,6 +209,12 @@ ALTER TABLE `experiences`
 --
 ALTER TABLE `formation`
   ADD PRIMARY KEY (`id_formation`);
+
+--
+-- Index pour la table `langues`
+--
+ALTER TABLE `langues`
+  ADD PRIMARY KEY (`id_langues`);
 
 --
 -- Index pour la table `loisirs`
@@ -193,32 +242,37 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `competences`
 --
 ALTER TABLE `competences`
-  MODIFY `id_competence` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_competence` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT pour la table `experiences`
 --
 ALTER TABLE `experiences`
-  MODIFY `id_experience` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_experience` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT pour la table `formation`
 --
 ALTER TABLE `formation`
-  MODIFY `id_formation` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_formation` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT pour la table `langues`
+--
+ALTER TABLE `langues`
+  MODIFY `id_langues` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT pour la table `loisirs`
 --
 ALTER TABLE `loisirs`
-  MODIFY `id_loisir` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_loisir` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT pour la table `titre`
 --
 ALTER TABLE `titre`
-  MODIFY `id_titre` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_titre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_user` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
