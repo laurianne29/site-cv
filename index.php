@@ -19,6 +19,9 @@ $titre = $sql -> fetchAll();
 $sql = $bdd -> query("SELECT * FROM loisirs");
 $loisirs = $sql -> fetchAll();
 
+$sql = $bdd -> query("SELECT * FROM langues");
+$langues = $sql -> fetchAll();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -78,7 +81,7 @@ $loisirs = $sql -> fetchAll();
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Mon profil</a>
+                        <a class="page-scroll" href="#services">A propos de moi</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#portfolio">Compétences</a>
@@ -141,6 +144,11 @@ $loisirs = $sql -> fetchAll();
                     <img class="img-circle img-responsive img-profil" src="front/img/autumn.jpg">
                 </div>
             </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quas suscipit nihil excepturi architecto eligendi cumque necessitatibus enim aperiam iusto. Vel, voluptatibus ipsam ullam. Itaque, magni? Vero omnis, veritatis nemo!</p>
+                </div>
+            </div>
             <div class="row" id="text-profil">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="timeline-heading text-left">
@@ -154,41 +162,14 @@ $loisirs = $sql -> fetchAll();
                 </div>
                 <div class="col-lg-offset-3 col-lg-5 col-md-offset-3 col-md-5 col-sm-offset-3 col-sm-5 col-xs-12">
                     <div class="description text-right">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo assumenda inventore impedit delectus, incidunt sapiente doloremque quam aliquid nobis debitis. Porro laborum architecto asperiores, iste accusamus at, doloremque quas recusandae.</p>
+                        <h4>Langues</h4>
+                        <p><?= $langues[0]['langue'] . $langues[0]['niveau'] ?></p>
+                        <p><?= $langues[1]['langue'] . $langues[1]['niveau'] ?></p>
+                        <p><?= $langues[2]['langue'] . $langues[2]['niveau'] ?></p>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <h4 class="text-center titre-interet">Mes intérêts</h4>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="logo-loisir text-center">
-                        <div class="col-md-offset-1 col-md-2">
-                            <img src="front/img/logos/html.png" alt="logo code" width="70">
-                            <p>Coder et me mettre à jour sur les nouvelles technologies et nouveaux langages web.</p>
-                        </div>
-                        <div class="col-md-2">
-                            <img src="front/img/logos/music.png" alt="logo guitare" width="70">
-                            <p>Guitare, piano, batterie... Je ne peux pas vivre sans musique !</p>
-                        </div>
-                        <div class="col-md-2">
-                            <img src="front/img/logos/cat.png" alt="logo chat" width="70">
-                            <p>Mon chat, toujours à mes côtés quand je travaille !</p>
-                        </div>
-                        <div class="col-md-2">
-                            <img src="front/img/logos/travel-1.png" alt="logo voyage" width="70">
-                            <p>Pérou, République-Tchèque, Ecosse, Angleterre, Italie... Voyager c'est se former sa propre bibliothèque.</p>
-                        </div>
-                        <div class="col-md-2">
-                            <img src="front/img/logos/telescope.png" alt="logo telescope" width="70">
-                            <p>Observer l'infiniment grand et voyager entre les constellations à travers mon télescope...</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </section>
 
@@ -340,8 +321,8 @@ $loisirs = $sql -> fetchAll();
     <section id="about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Formations / Expériences</h2>
+                <div class="col-lg-offset-3 col-lg-6 text-center">
+                    <h2 class="section-heading">Formations / Expériences professionnelles</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
             </div>
@@ -560,10 +541,7 @@ $loisirs = $sql -> fetchAll();
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
-                        </li>
-                        <li><a href="#">Terms of Use</a>
-                        </li>
+                        <a href="#">Espace admin</a>
                     </ul>
                 </div>
             </div>

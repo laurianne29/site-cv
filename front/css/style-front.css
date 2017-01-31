@@ -182,6 +182,10 @@ header .intro-text .intro-lead-in {
 	font-size: 1.5em;
 }
 
+#text-profil .timeline-heading {
+	display: inline-block;
+}
+
 
 	/* MOBILE PORTRAIT & MOBILE PAYSAGE */
 	 @media screen and (max-width: 768px) {
@@ -273,7 +277,7 @@ header .intro-text .intro-lead-in {
   height: 10rem;
   width: 100%;
   font-family: arial, sans-serif;
-  color: rgba(255,0,0,0.5);
+  color: rgba(255, 255, 255, 0.88);
   font-size: 3rem;
   text-align: center;
 }
@@ -331,16 +335,19 @@ header .intro-text .intro-lead-in {
 	color: snow;
 }
 
-.timeline ul li::after {
+.timeline ul li:nth-child(2n+1)::after {
   content: url("../img/logos/school.png");
   position: absolute;
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-/*  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: inherit;*/
+}
+.timeline ul li:nth-child(2n+2)::after {
+  content: url("../img/logos/school.png");
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
 }
 
 .timeline ul li div {
