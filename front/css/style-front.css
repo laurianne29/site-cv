@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Bad+Script|Merienda|Amita|Cormorant+Upright|Lato:100,400|Arima+Madurai|Overlock');
 
+/* //////////////////////////////////////////////////////////////// GENERAL STYLE ////////////////////////////////////////////////////////////////// */
+
 body {
 	background: #D0B1B7;
 }
@@ -12,7 +14,8 @@ header {
 	background-image: none;
 }
 
-/************************************************************* LOADER ************************/
+/* ////////////////////////////////////////////////////////////////  LOADER /////////////////////////////////////////////////////////////////////// */
+
 /*.loader {
 	position : fixed;
 	z-index: 9999;
@@ -23,10 +26,12 @@ header {
 	width : 100%;
 	cursor : wait;
 }*/
-/************************************************************* FIN DU LOADER *****************/
+
+/* ////////////////////////////////////////////////////////////////  FIN DU LOADER //////////////////////////////////////////////////////////////// */
 
 
-/************************************************************* PARALLAX **********************/
+/* ////////////////////////////////////////////////////////////////  PARALLAX ///////////////////////////////////////////////////////////////////// */
+
 .parallax-window {
 	min-height: 400px;
 	background: transparent;
@@ -36,9 +41,10 @@ header {
 	min-height: 150px;
 	background: transparent;
 }
-/************************************************************* FIN DU PARALLAX ****************/
 
-/************************************************************* NAVBAR *************************/
+/* ////////////////////////////////////////////////////////////////  FIN DU PARALLAX ///////////////////////////////////////////////////////////// */
+
+/* //////////////////////////////////////////////////////////////// NAVBAR ////////////////////////////////////////////////////////////////////// */
 
 .navbar-custom .navbar-brand {
 	color: #BC2F47;
@@ -61,17 +67,24 @@ header {
   #header-nav li a:hover {
   	  color: #FFE1E9;
   }
-/************************************************************* FIN NAVBAR *************************/
 
-/************************************************************* TITRE + SOUS-TITRE *****************/
+/* ////////////////////////////////////////////////////////////////// FIN NAVBAR ///////////////////////////////////////////////////////////////// */
+
+/* ///////////////////////////////////////////////////////////////// TITRE + SOUS-TITRE ///////////////////////////////////////////////////////// */
+/*header .container {
+	margin-top: -45px;
+}*/
+
 header .intro-text {
-	margin-bottom: 30px;
+	padding-top: 230px;
+	padding-bottom: 100px
 }
+
 header .intro-text .intro-heading {
 	font-family: 'Amatic SC', cursive;
 	text-transform: capitalize;
 	font-size: 6.5em;
-font-weight: lighter;
+	font-weight: lighter;
 } 
 header .intro-text .intro-lead-in {
 	font-family: 'Amatic SC', cursive;
@@ -79,6 +92,9 @@ header .intro-text .intro-lead-in {
 	letter-spacing: 5px;
 	font-size: 3.2em;
 }
+
+/* ||||||||||||||||||||||||||| MEDIA QUERIES ||||||||||||||||||||||||||| */
+
 	/* MOBILE PORTRAIT & MOBILE PAYSAGE */
 	 @media screen and (max-width: 600px) {
 	 	header .intro-text .intro-heading{
@@ -117,11 +133,6 @@ header .intro-text .intro-lead-in {
 	 		font-size: 3.2em;
 	 	}
 	}
- 
-.fa-angle-double-down {
-	  margin-top: 120px;
-	  color: #C9324C;
-}
 
 .section h2 .section-heading {
 	margin-top: -37px;
@@ -131,8 +142,14 @@ header .intro-text .intro-lead-in {
 	font-family: 'Amatic SC', cursive;
 	letter-spacing: 4px;
 }
+ 
+.fa-angle-double-down {
+	  margin-top: 120px;
+	  color: #C9324C;
+}
 
-/************************************************************** ICONES RESEAUX SOCIAUX *************/
+/* //////////////////////////////////////////////////////////////// ICONES RESEAUX SOCIAUX /////////////////////////////////////////////////////// */
+
 .icones {
 	margin-top: 130px;
 	word-spacing: 15px;
@@ -169,41 +186,17 @@ header .intro-text .intro-lead-in {
 	.fa-instagram:hover {
 		color: snow;
 	}
-/************************************************************** FIN DES ICONES ********************/
+/* ///////////////////////////////////////////////////////////////////// FIN DES ICONES /////////////////////////////////////////////////////////// */
 
-/************************************************************** PROFIL ****************************/
-#text-profil p {
-	font-family: 'Overlock', serif;
-	font-size: 1.3em;
-}
+/* ///////////////////////////////////////////////////////////////////// PROFIL ////////////////////////////////////////////////////////////////// */
 
-#text-profil h4 {
-	font-family: 'Overlock', serif;
-	font-size: 1.5em;
-}
-
-#text-profil .timeline-heading {
-	display: inline-block;
-}
-
-
-	/* MOBILE PORTRAIT & MOBILE PAYSAGE */
-	 @media screen and (max-width: 768px) {
-	 	#text-profil .timeline-heading{
-			text-align: center;
-	 	}
-	 	#text-profil .description {
-	 		margin-top: 15px;
-	 		text-align: center;
-	 	}
-	}
 	
 
 .fa-circle{
 	color: #4D3968;
 }
 
-#services {
+#profil {
 	background: #D0B1B7;
 }
 
@@ -213,31 +206,45 @@ header .intro-text .intro-lead-in {
 	margin: 0 auto 20px;
 }
 
-.logo-loisir p {
-	font-size: 1em;
-	font-family: 'Overlock', arial, sans-serif;
+#description p {
+	font-family: 'Overlock', serif;
+	font-size: 1.3em;
 }
 
-.titre-interet {
-	margin: 30px 0 40px;
-	font-family: 'Amatic SC', serif;
-	font-size: 2.5em;
-	letter-spacing: 4px;
+#description h4 {
+	font-family: 'Overlock', serif;
+	font-size: 1.5em;
 }
 
-.logo-loisir img {
-	margin: 0px 18px;
+#description .timeline-heading {
+	display: inline-block;
 }
-/*----------------------------------------------- COMPETENCES */
 
-#portfolio .container h3:nth-child(2n+1) {
+/* ||||||||||||||||||||||||||| MEDIA QUERIES ||||||||||||||||||||||||||| */
+
+	/* MOBILE PORTRAIT & MOBILE PAYSAGE */
+	 @media screen and (max-width: 768px) {
+	 	#description .timeline-heading{
+			text-align: center;
+	 	}
+	 	/* #text-profil .description {
+	 		margin-top: 15px;
+	 		text-align: center;
+	 	}*/
+	}
+
+/* ///////////////////////////////////////////////////////////////////// FIN DU PROFIL //////////////////////////////////////////////////////////// */
+
+/* //////////////////////////////////////////////////////////////////// COMPETENCES /////////////////////////////////////////////////////////////// */
+
+#competences .container h3:nth-child(2n+1) {
 	font-family: 'Overlock', arial, sans-serif;
 	text-transform: capitalize;
 	color: #D8CD81;
 }
 
-#portfolio .container h2 {
-	color: #D8CD81;
+#competences .container h2 {
+	color: #D0B1B7;
 }
 
 .icon {
@@ -308,16 +315,15 @@ header .intro-text .intro-lead-in {
     stroke-dashoffset: 100;
   }
 }
+/* //////////////////////////////////////////////////////////////////// FIN COMPETENCES //////////////////////////////////////////////////////////// */
 
+/*//////////////////////////////////////////////////////////////////// FORMATIONS / EXPERIENCES /////////////////////////////////////////////////// */
 
-/*----------------------------------------------- FORMATIONS / EXPERIENCES */
-#about {
-	/*background: #F0E6FF;*/
-	/*background: #B0C7D8;*/
-	background: #D0B1B7;
+#formations-exp .section-heading {
+	color: #D0B1B7;
 }
 
-/**** TIMELINE ****/
+/* ||||||||||||||||||||||| TIMELINE ||||||||||||||||||||||| */
 .timeline ul {
   padding: 50px 0;
 }
@@ -394,9 +400,7 @@ time {
   margin-bottom: 8px;
 }
 
-
-/* EFFECTS
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* ||||||||||||||||||||||||||| EFFETS ||||||||||||||||||||||||| */
 
 .timeline ul li::after {
   transition: background .5s ease-in-out;
@@ -427,70 +431,90 @@ time {
 }
 
 
-/* GENERAL MEDIA QUERIES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-@media screen and (max-width: 740px) {
-  header .text-heading {
-    font-size: 10px;
-  }
-}
+/* ||||||||||||||||||||||||||| GENERAL MEDIA QUERIES ||||||||||||||||||||||||| */
 
-@media screen and (max-width: 900px) {
-  .timeline ul li div {
-    width: 250px;
-  }
-  .timeline ul li:nth-child(odd) div {
-    left: -289px;
-    /*250+45-6*/
-  }
-}
+	@media screen and (max-width: 740px) {
+	  header .text-heading {
+	    font-size: 10px;
+	  }
+	}
 
-@media screen and (max-width: 600px) {
-  .timeline ul li {
-    margin-left: 20px;
-  }
-  .timeline ul li div {
-    width: calc(100vw - 91px);
-  }
-  .timeline ul li:nth-child(odd) div {
-    left: 45px;
-  }
-  .timeline ul li:nth-child(odd) div::before {
-    left: -15px;
-    border-width: 8px 16px 8px 0;
-    border-color: transparent #F45B69 transparent transparent;
-  }
-}
+	@media screen and (max-width: 900px) {
+	  .timeline ul li div {
+	    width: 250px;
+	  }
+	  .timeline ul li:nth-child(odd) div {
+	    left: -289px;
+	    /*250+45-6*/
+	  }
+	}
 
-/*----------------------------------------------- PORTFOLIO */
+	@media screen and (max-width: 600px) {
+	  .timeline ul li {
+	    margin-left: 20px;
+	  }
+	  .timeline ul li div {
+	    width: calc(100vw - 91px);
+	  }
+	  .timeline ul li:nth-child(odd) div {
+	    left: 45px;
+	  }
+	  .timeline ul li:nth-child(odd) div::before {
+	    left: -15px;
+	    border-width: 8px 16px 8px 0;
+	    border-color: transparent #F45B69 transparent transparent;
+	  }
+	}
 
-#team {
+/* ///////////////////////////////////////////////////////////////////// FIN FORMATIONS ///////////////////////////////////////////////////////////// */
+
+/* //////////////////////////////////////////////////////////////////// PROJETS ///////////////////////////////////////////////////////////////////// */
+
+#projets {
 	background: none;
 }
 
-#team .section-heading {
+#projets .section-heading {
 	color: #D8CD81;
 }
 
-#loisir {
-	color: #FFF4EE;
+/* /////////////////////////////////////////////////////////////////// FIN PROJETS /////////////////////////////////////////////////////////////////// */
+
+/* ////////////////////////////////////////////////////////////////// MES INTERETS ////////////////////////////////////////////////////////////////// */
+
+.logo-loisir p {
+	font-size: 1em;
+	font-family: 'Overlock', arial, sans-serif;
 }
 
-/*-----------------------------------------------  ASIDE DL MON CV */
+.logo-loisir img {
+	margin: 0px 18px;
+}
 
-.dl-cv .button {
+/* //////////////////////////////////////////////////////////////////// ASIDE CV ////////////////////////////////////////////////////////////////// */
+
+/*.dl-cv {
+	min-height: 200px;
+	background: transparent;
+}*/
+
+.cv {
+	background: #192233;
+}
+
+.cv .button {
 	margin: 7px auto;
 	width: 270px;
 	font-family: 'Lato', sans-serif;
 	font-size: 1.5em;
 }
-.dl-cv .button a {
+.cv .button a {
 	padding: 20px;
 	display: block;
 	text-decoration: none;
 	color: #BC2F41;
 }
-.dl-cv .button a:hover {
+.cv .button a:hover {
 	text-decoration: none;
 	color: snow;
 }
@@ -529,9 +553,10 @@ time {
   width: 100%;
   left: 0;
 }
+/* /////////////////////////////////////////////////////////////////////////// FIN ASIDE CV /////////////////////////////////////////////////////// */
 
+/* /////////////////////////////////////////////////////////////////////////// CONTACT //////////////////////////////////////////////////////////// */
 
-/*----------------------------------------------- CONTACT*/
 section#contact {
 	animation: pulse 4s infinite;
 }
@@ -551,7 +576,7 @@ section#contact {
 	background: none;
 }
 
-/* FORMULAIRE */
+/* ||||||||||||||||||||| FORMULAIRE ||||||||||||||||||||| */
 
 section .button {
 	width: 250px;
@@ -593,8 +618,4 @@ section#contact .form-control:focus {
   border-color: #fed136;
   /*box-shadow: none;*/
 }
-/*----------------------------------------------- FIN FORMULAIRE */
-
-.timeline-image {
-	background: #423E55;
-}
+/* //////////////////////////////////////////////////////////// FIN CONTACT //////////////////////////////////////////////////////////////////////// */

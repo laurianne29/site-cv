@@ -81,16 +81,19 @@ $langues = $sql -> fetchAll();
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">A propos de moi</a>
+                        <a class="page-scroll" href="#profil">A propos de moi</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Compétences</a>
+                        <a class="page-scroll" href="#competences">Compétences</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">Expériences & Formations</a>
+                        <a class="page-scroll" href="#projets">Projets</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#team">Portfolio</a>
+                        <a class="page-scroll" href="#formations-exp">Expériences & Formations</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#interets">Intérêts</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -124,14 +127,14 @@ $langues = $sql -> fetchAll();
                         <a href="https://www.linkedin.com/in/laurianne-michelot-04a174b2?trk=hp-identity-name" target="_blank"><i class="fa fa-linkedin fa-4x" aria-hidden="true"></i></a>
                         <a href="https://www.instagram.com/killa_luna/" target="_blank"><i class="fa fa-instagram fa-4x" aria-hidden="true"></i></a>
                     </div>
-                    <a class="page-scroll" href="#services"><i class="fa fa-angle-double-down fa-5x" aria-hidden="true"></i></a>
+                    <a class="page-scroll" href="#profil"><i class="fa fa-angle-double-down fa-5x" aria-hidden="true"></i></a>
                 </div>
             </div>
         </header>
     </div>
 
     <!-- SECTION PROFIL -->
-    <section id="services">
+    <section id="profil">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -149,37 +152,17 @@ $langues = $sql -> fetchAll();
                     <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quas suscipit nihil excepturi architecto eligendi cumque necessitatibus enim aperiam iusto. Vel, voluptatibus ipsam ullam. Itaque, magni? Vero omnis, veritatis nemo!</p>
                 </div>
             </div>
-            <div class="row" id="text-profil">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <div class="timeline-heading text-left">
-                        <h4>Age</h4>
-                        <p> <?= $user['age'] . ' ans'; ?></p>
-                        <h4>Email</h4>
-                        <p> <?= $user['email']; ?></p>
-                        <h4>Téléphone</h4>
-                        <p> <?= $user['tel']; ?></p>
-                    </div>
-                </div>
-                <div class="col-lg-offset-3 col-lg-5 col-md-offset-3 col-md-5 col-sm-offset-3 col-sm-5 col-xs-12">
-                    <div class="description text-right">
-                        <h4>Langues</h4>
-                        <p><?= $langues[0]['langue'] . $langues[0]['niveau'] ?></p>
-                        <p><?= $langues[1]['langue'] . $langues[1]['niveau'] ?></p>
-                        <p><?= $langues[2]['langue'] . $langues[2]['niveau'] ?></p>
-                    </div>
-                </div>
-            </div>
-            
         </div>
     </section>
 
     <!-- SECTION COMPETENCES -->
     <div class="parallax-window" data-parallax="scroll" data-image-src="front/img/montgolfiere.jpg">
-        <section id="portfolio">
+        <section id="competences">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <h2 class="section-heading text-center">Compétences</h2>
+                        <h3 class="section-subheading text-muted text-center">En veille technique permanante, </h3>
                     </div>
                 </div>
                 <div class="row">
@@ -317,168 +300,180 @@ $langues = $sql -> fetchAll();
             </div>
         </section>
     </div>
-    <!-- SECTION EXPERIENCES / FORMATIONS-->
-    <section id="about">
+
+    <!--////////////////////////////////////////////////////////////////// PROJET \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+
+    <section id="projets">
         <div class="container">
             <div class="row">
-                <div class="col-lg-offset-3 col-lg-6 text-center">
-                    <h2 class="section-heading">Formations / Expériences professionnelles</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Mes projets</h2>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12">
-                    <section class="timeline">
-                        <ul>
-                            <li>
-                                <div>
-                                    <time class="text-uppercase"><?= $experiences[0]['dates'] ?></time>
-                                    <h4 class="subheading"><?= $experiences[0]['experience']; ?></h4>
-                                    <p class="text-muted"><?= $experiences[0]['taches'] ?></p>
-                                    <span>Ville</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <time class="text-uppercase"><?= $formations[0]['dates_formation'] ?></time>
-                                    <h4 class="subheading"><?= $formations[0]['formation']; ?></h4>
-                                    <p class="text-muted"><?= $formations[0]['description'] ?></p>
-                                    <span>Ville</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <time class="text-uppercase"><?= $formations[1]['dates_formation'] ?></time>
-                                    <h4 class="subheading"><?= $formations[1]['formation'] ?></h4>
-                                    <p class="text-muted"><?= $formations[1]['description'] ?></p>
-                                    <span>Ville</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <time class="text-uppercase"><?= $experiences[1]['dates'] ?></time>
-                                    <h4 class="subheading"><?= $experiences[1]['experience']; ?></h4>
-                                    <p class="text-muted"><?= $experiences[1]['taches']; ?></p>
-                                    <span>Ville</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </section>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="front/img/portfolio/roundicons.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Round Icons</h4>
+                        <p class="text-muted">Graphic Design</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="front/img/portfolio/startup-framework.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Startup Framework</h4>
+                        <p class="text-muted">Website Design</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="front/img/portfolio/treehouse.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Treehouse</h4>
+                        <p class="text-muted">Website Design</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PORTFOLIO SECTION -->
+    <!--/////////////////////////////////////////////////////////// SECTION EXPERIENCES / FORMATIONS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+
     <div class="parallax-window" data-parallax="scroll" data-image-src="front/img/montgolfiere.jpg">
-        <section id="team" class="bg-light-gray">
+        <section id="formations-exp">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h2 class="section-heading">Portfolio</h2>
+                    <div class="col-lg-offset-3 col-lg-6 text-center">
+                        <h2 class="section-heading">Formations / Expériences professionnelles</h2>
+                        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 col-sm-6 portfolio-item">
-                        <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content">
-                                    <i class="fa fa-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img src="front/img/portfolio/roundicons.png" class="img-responsive" alt="">
-                        </a>
-                        <div class="portfolio-caption">
-                            <h4>Round Icons</h4>
-                            <p class="text-muted">Graphic Design</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 portfolio-item">
-                        <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content">
-                                    <i class="fa fa-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img src="front/img/portfolio/startup-framework.png" class="img-responsive" alt="">
-                        </a>
-                        <div class="portfolio-caption">
-                            <h4>Startup Framework</h4>
-                            <p class="text-muted">Website Design</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 portfolio-item">
-                        <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content">
-                                    <i class="fa fa-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img src="front/img/portfolio/treehouse.png" class="img-responsive" alt="">
-                        </a>
-                        <div class="portfolio-caption">
-                            <h4>Treehouse</h4>
-                            <p class="text-muted">Website Design</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 portfolio-item">
-                        <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content">
-                                    <i class="fa fa-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img src="front/img/portfolio/golden.png" class="img-responsive" alt="">
-                        </a>
-                        <div class="portfolio-caption">
-                            <h4>Golden</h4>
-                            <p class="text-muted">Website Design</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 portfolio-item">
-                        <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content">
-                                    <i class="fa fa-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img src="front/img/portfolio/escape.png" class="img-responsive" alt="">
-                        </a>
-                        <div class="portfolio-caption">
-                            <h4>Escape</h4>
-                            <p class="text-muted">Website Design</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 portfolio-item">
-                        <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content">
-                                    <i class="fa fa-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img src="front/img/portfolio/dreams.png" class="img-responsive" alt="">
-                        </a>
-                        <div class="portfolio-caption">
-                            <h4>Dreams</h4>
-                            <p class="text-muted">Website Design</p>
-                        </div>
+                    <div class="col-lg-12">
+                        <section class="timeline">
+                            <ul>
+                                <li>
+                                    <div>
+                                        <time class="text-uppercase"><?= $experiences[0]['dates'] ?></time>
+                                        <h4 class="subheading"><?= $experiences[0]['experience']; ?></h4>
+                                        <p class="text-muted"><?= $experiences[0]['taches'] ?></p>
+                                        <span>Ville</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <time class="text-uppercase"><?= $formations[0]['dates_formation'] ?></time>
+                                        <h4 class="subheading"><?= $formations[0]['formation']; ?></h4>
+                                        <p class="text-muted"><?= $formations[0]['description'] ?></p>
+                                        <span>Ville</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <time class="text-uppercase"><?= $formations[1]['dates_formation'] ?></time>
+                                        <h4 class="subheading"><?= $formations[1]['formation'] ?></h4>
+                                        <p class="text-muted"><?= $formations[1]['description'] ?></p>
+                                        <span>Ville</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <time class="text-uppercase"><?= $experiences[1]['dates'] ?></time>
+                                        <h4 class="subheading"><?= $experiences[1]['experience']; ?></h4>
+                                        <p class="text-muted"><?= $experiences[1]['taches']; ?></p>
+                                        <span>Ville</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
                     </div>
                 </div>
             </div>
         </section>
     </div>
 
-    <!-- Clients Aside -->
-        <aside class="dl-cv">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <div class="button"><a href="front/img/cv_laurianne.pdf" target="_blank">MON CV PAPIER</a></div>
+    <!-- ////////////////////////////////////////////////////////////////////// SECTION INTERETS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+    <section id="interets" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-heading text-center">Mes intérêts</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="logo-loisir text-center">
+                        <div class="col-md-offset-1 col-md-2">
+                            <img src="front/img/logos/html.png" alt="logo code" width="70">
+                            <p>Coder et me mettre à jour sur les nouvelles technologies et nouveaux langages web.</p>
+                        </div>
+                        <div class="col-md-2">
+                            <img src="front/img/logos/music.png" alt="logo guitare" width="70">
+                            <p>Guitare, piano, batterie... Je ne peux pas vivre sans musique !</p>
+                        </div>
+                        <div class="col-md-2">
+                            <img src="front/img/logos/cat.png" alt="logo chat" width="70">
+                            <p>Mon chat, toujours à mes côtés quand je travaille !</p>
+                        </div>
+                        <div class="col-md-2">
+                            <img src="front/img/logos/travel-1.png" alt="logo voyage" width="70">
+                            <p>Pérou, République-Tchèque, Ecosse, Angleterre, Italie... Voyager c'est se former sa propre bibliothèque.</p>
+                        </div>
+                        <div class="col-md-2">
+                            <img src="front/img/logos/telescope.png" alt="logo telescope" width="70">
+                            <p>Observer l'infiniment grand et voyager entre les constellations à travers mon télescope...</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </aside>
-    <!-- Contact Section -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="description text-center">
+                        <h4>Langues</h4>
+                        <p><?= $langues[0]['langue'] .' : '. $langues[0]['niveau'] ?></p>
+                        <p><?= $langues[1]['langue'] .' : '. $langues[1]['niveau'] ?></p>
+                        <p><?= $langues[2]['langue'] .' : '. $langues[2]['niveau'] ?></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--//////////////////////////////////////////////////////////////////// TELECHARGER MON CV \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+    <aside class="cv">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="button"><a href="front/img/cv_laurianne.pdf" target="_blank">MON CV PAPIER</a></div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!--////////////////////////////////////////////////////////////////// SECTION CONTACTEZ-MOI ///////////////////////////////////////////////////////////////////////// -->
+
     <section id="contact">
         <div class="container">
             <div class="row">
