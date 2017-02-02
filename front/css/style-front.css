@@ -14,18 +14,16 @@ header {
 	background-image: none;
 }
 
+section {
+	padding: 115px 0; 
+}
+
 /* ////////////////////////////////////////////////////////////////  LOADER /////////////////////////////////////////////////////////////////////// */
 
-/*.loader {
-	position : fixed;
-	z-index: 9999;
-	background : url('icon-loader.gif') 50% 50% no-repeat;
-	top : 0px;
-	left : 0px;
-	height : 100%;
-	width : 100%;
-	cursor : wait;
-}*/
+/*****
+******
+******
+*/
 
 /* ////////////////////////////////////////////////////////////////  FIN DU LOADER //////////////////////////////////////////////////////////////// */
 
@@ -76,8 +74,8 @@ header {
 }*/
 
 header .intro-text {
-	padding-top: 230px;
-	padding-bottom: 100px
+	padding-top: 255px;
+	padding-bottom: 130px
 }
 
 header .intro-text .intro-heading {
@@ -98,7 +96,7 @@ header .intro-text .intro-lead-in {
 	/* MOBILE PORTRAIT & MOBILE PAYSAGE */
 	 @media screen and (max-width: 600px) {
 	 	header .intro-text .intro-heading{
-			font-size: 3.5em;
+			font-size: 4.5em;
 	 	}
 
 	 	header .intro-text .intro-lead-in {
@@ -190,7 +188,6 @@ header .intro-text .intro-lead-in {
 
 /* ///////////////////////////////////////////////////////////////////// PROFIL ////////////////////////////////////////////////////////////////// */
 
-	
 
 .fa-circle{
 	color: #4D3968;
@@ -349,7 +346,7 @@ header .intro-text .intro-lead-in {
   transform: translateX(-50%);
 }
 .timeline ul li:nth-child(2n+2)::after {
-  content: url("../img/logos/school.png");
+  content: url("../img/logos/browser.png");
   position: absolute;
   left: 50%;
   bottom: 0;
@@ -477,6 +474,78 @@ time {
 #projets .section-heading {
 	color: #D8CD81;
 }
+
+#projets article {
+  width: 500px;
+  margin: 100px auto 0;
+}
+
+#projets header {
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+#projets header img {
+  display: block;
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  margin-top: -200px;
+  left: 50%;
+  margin-left: -300px;
+  transform-origin: 50% 50%;
+  transform: scale(0.9) rotate(-5deg);
+  transition: all 1s ease-in-out;
+}
+
+#projets header:hover img {
+  transform: scale(1) rotate(0);
+}
+
+#projets header h1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 2.5em;
+  color: #fff;
+  text-transform: uppercase;
+  background: rgba(0,0,0,0.8);
+  padding: 0 0.3em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#projets .content {
+  float: left; /* float left to restore height from floated tags */
+  background: #fff;
+  padding: 1em;
+}
+
+#projets h2 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 1.875em;
+  margin-bottom: 0.25em;
+}
+
+#projets .tags li {
+  float: left;
+  background: #f2f2f2;
+  padding: 0 0.5em;
+  margin: 0 0.5em 0 0;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+}
+
+#projets .tags .html { border-bottom-color: #e34c26; }
+#projets .tags .css { border-bottom-color: #2662e3; }
+#projets .tags .js { border-bottom-color: #8CC84B; }
+
 
 /* /////////////////////////////////////////////////////////////////// FIN PROJETS /////////////////////////////////////////////////////////////////// */
 

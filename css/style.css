@@ -95,6 +95,19 @@ header{
 		text-align: center;
 		font-size: 1.3em;
 	}
+	#site-cv {
+		margin-top: -160px;
+		margin-left: 20px;
+		position: absolute;
+	}
+	#site-cv a {
+		color: snow;
+		text-decoration: none;
+	}
+	#site-cv a:hover {
+		color: #A599B4;
+		text-decoration: underline;
+	}
 
 #active{
 	

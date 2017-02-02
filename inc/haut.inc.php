@@ -15,6 +15,7 @@
 <body>
 	<header>
 		<h1>Espace administratif du site CV</h1>
+		<span id="site-cv"><a href="index.php">Aperçu sur le site CV</a></span>
 	</header>
 	<nav>
 		<ul>

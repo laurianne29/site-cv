@@ -61,7 +61,14 @@ $langues = $sql -> fetchAll();
 
 <body id="page-top" class="index">
 
-    <!-- LOADER AVANT DE CHARGER LA PAGE -->
+    <!-- PRELOADER-->
+    <div id="loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
 
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
@@ -312,46 +319,55 @@ $langues = $sql -> fetchAll();
             </div>
             <div class="row">
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="front/img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Round Icons</h4>
-                        <p class="text-muted">Graphic Design</p>
-                    </div>
+                    <article>
+                      <header>
+                        <img src="front/img/portfolio/site-cv-rogner.png" />
+                        <h1>Site CV responsive</h1>
+                      </header>
+                      <div class="content">
+                        <p>A small description about the project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus minus quae suscipit a molestiae earum sunt velit ea impedit porro sit ducimus fugiat aliquam eligendi totam necessitatibus amet? Necessitatibus dignissimos.</p>
+                        <h2>Skills used:</h2>
+                        <ul class="tags">
+                          <li class="html">HTML</li>
+                          <li class="css">CSS</li>
+                          <li class="js">JavaScript</li>
+                        </ul>
+                      </div>
+                    </article>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="front/img/portfolio/startup-framework.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Startup Framework</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
+                    <article>
+                      <header>
+                        <img src="front/img/portfolio/site-cv-rogner.png" />
+                        <h1>Portfolio Item Title</h1>
+                      </header>
+                      <div class="content">
+                        <p>A small description about the project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus minus quae suscipit a molestiae earum sunt velit ea impedit porro sit ducimus fugiat aliquam eligendi totam necessitatibus amet? Necessitatibus dignissimos.</p>
+                        <h2>Skills used:</h2>
+                        <ul class="tags">
+                          <li class="html">HTML</li>
+                          <li class="css">CSS</li>
+                          <li class="js">JavaScript</li>
+                        </ul>
+                      </div>
+                    </article>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="front/img/portfolio/treehouse.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Treehouse</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
+                    <article>
+                      <header>
+                        <img src="front/img/portfolio/site-cv-rogner.png" />
+                        <h1>Portfolio Item Title</h1>
+                      </header>
+                      <div class="content">
+                        <p>A small description about the project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus minus quae suscipit a molestiae earum sunt velit ea impedit porro sit ducimus fugiat aliquam eligendi totam necessitatibus amet? Necessitatibus dignissimos.</p>
+                        <h2>Skills used:</h2>
+                        <ul class="tags">
+                          <li class="html">HTML</li>
+                          <li class="css">CSS</li>
+                          <li class="js">JavaScript</li>
+                        </ul>
+                      </div>
+                    </article>
                 </div>
             </div>
         </div>
@@ -374,34 +390,34 @@ $langues = $sql -> fetchAll();
                             <ul>
                                 <li>
                                     <div>
-                                        <time class="text-uppercase"><?= $experiences[0]['dates'] ?></time>
-                                        <h4 class="subheading"><?= $experiences[0]['experience']; ?></h4>
-                                        <p class="text-muted"><?= $experiences[0]['taches'] ?></p>
-                                        <span>Ville</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <time class="text-uppercase"><?= $formations[0]['dates_formation'] ?></time>
-                                        <h4 class="subheading"><?= $formations[0]['formation']; ?></h4>
-                                        <p class="text-muted"><?= $formations[0]['description'] ?></p>
-                                        <span>Ville</span>
+                                        <time class="text-uppercase"><?= $experiences[1]['dates'] ?></time>
+                                        <h4 class="subheading"><?= $experiences[1]['experience']; ?></h4>
+                                        <p class="text-muted"><?= $experiences[1]['taches'] ?></p>
+                                        <span><?= $experiences[1]['lieu'] ?></span>
                                     </div>
                                 </li>
                                 <li>
                                     <div>
                                         <time class="text-uppercase"><?= $formations[1]['dates_formation'] ?></time>
-                                        <h4 class="subheading"><?= $formations[1]['formation'] ?></h4>
+                                        <h4 class="subheading"><?= $formations[1]['formation']; ?></h4>
                                         <p class="text-muted"><?= $formations[1]['description'] ?></p>
-                                        <span>Ville</span>
+                                        <span><?= $formations[1]['lieu'] ?></span>
                                     </div>
                                 </li>
                                 <li>
                                     <div>
-                                        <time class="text-uppercase"><?= $experiences[1]['dates'] ?></time>
-                                        <h4 class="subheading"><?= $experiences[1]['experience']; ?></h4>
-                                        <p class="text-muted"><?= $experiences[1]['taches']; ?></p>
-                                        <span>Ville</span>
+                                        <time class="text-uppercase"><?= $formations[0]['dates_formation'] ?></time>
+                                        <h4 class="subheading"><?= $formations[0]['formation'] ?></h4>
+                                        <p class="text-muted"><?= $formations[0]['description'] ?></p>
+                                        <span><?= $formations[0]['lieu'] ?></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <time class="text-uppercase"><?= $experiences[0]['dates'] ?></time>
+                                        <h4 class="subheading"><?= $experiences[0]['experience']; ?></h4>
+                                        <p class="text-muted"><?= $experiences[0]['taches']; ?></p>
+                                        <span><?= $experiences[0]['lieu'] ?></span>
                                     </div>
                                 </li>
                             </ul>
@@ -437,7 +453,7 @@ $langues = $sql -> fetchAll();
                             <p>Mon chat, toujours à mes côtés quand je travaille !</p>
                         </div>
                         <div class="col-md-2">
-                            <img src="front/img/logos/travel-1.png" alt="logo voyage" width="70">
+                            <img src="front/img/logos/travel.png" alt="logo voyage" width="70">
                             <p>Pérou, République-Tchèque, Ecosse, Angleterre, Italie... Voyager c'est se former sa propre bibliothèque.</p>
                         </div>
                         <div class="col-md-2">
@@ -536,7 +552,7 @@ $langues = $sql -> fetchAll();
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
-                        <a href="#">Espace admin</a>
+                        <a href="connexion.php">Espace admin</a>
                     </ul>
                 </div>
             </div>
