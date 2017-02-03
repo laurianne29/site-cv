@@ -472,7 +472,7 @@ time {
 }
 
 #projets .section-heading {
-	color: #D8CD81;
+	color: #2B374D;
 }
 
 #projets article {
@@ -481,7 +481,7 @@ time {
 }
 
 #projets header {
-  width: 500px;
+  width: 440px;
   height: 300px;
   overflow: hidden;
   position: relative;
@@ -525,9 +525,10 @@ time {
   float: left; /* float left to restore height from floated tags */
   background: #fff;
   padding: 1em;
+  width: 440px;
 }
 
-#projets h2 {
+#projets .content h2 {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-size: 1.875em;
   margin-bottom: 0.25em;
@@ -543,7 +544,7 @@ time {
 }
 
 #projets .tags .html { border-bottom-color: #e34c26; }
-#projets .tags .css { border-bottom-color: #2662e3; }
+#projets .tags .php { border-bottom-color: #2662e3; }
 #projets .tags .js { border-bottom-color: #8CC84B; }
 
 

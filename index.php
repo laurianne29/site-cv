@@ -318,57 +318,51 @@ $langues = $sql -> fetchAll();
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <article>
-                      <header>
-                        <img src="front/img/portfolio/site-cv-rogner.png" />
-                        <h1>Site CV responsive</h1>
-                      </header>
-                      <div class="content">
-                        <p>A small description about the project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus minus quae suscipit a molestiae earum sunt velit ea impedit porro sit ducimus fugiat aliquam eligendi totam necessitatibus amet? Necessitatibus dignissimos.</p>
-                        <h2>Skills used:</h2>
-                        <ul class="tags">
-                          <li class="html">HTML</li>
-                          <li class="css">CSS</li>
-                          <li class="js">JavaScript</li>
-                        </ul>
-                      </div>
-                    </article>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <article>
-                      <header>
-                        <img src="front/img/portfolio/site-cv-rogner.png" />
-                        <h1>Portfolio Item Title</h1>
-                      </header>
-                      <div class="content">
-                        <p>A small description about the project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus minus quae suscipit a molestiae earum sunt velit ea impedit porro sit ducimus fugiat aliquam eligendi totam necessitatibus amet? Necessitatibus dignissimos.</p>
-                        <h2>Skills used:</h2>
-                        <ul class="tags">
-                          <li class="html">HTML</li>
-                          <li class="css">CSS</li>
-                          <li class="js">JavaScript</li>
-                        </ul>
-                      </div>
-                    </article>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <article>
-                      <header>
-                        <img src="front/img/portfolio/site-cv-rogner.png" />
-                        <h1>Portfolio Item Title</h1>
-                      </header>
-                      <div class="content">
-                        <p>A small description about the project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus minus quae suscipit a molestiae earum sunt velit ea impedit porro sit ducimus fugiat aliquam eligendi totam necessitatibus amet? Necessitatibus dignissimos.</p>
-                        <h2>Skills used:</h2>
-                        <ul class="tags">
-                          <li class="html">HTML</li>
-                          <li class="css">CSS</li>
-                          <li class="js">JavaScript</li>
-                        </ul>
-                      </div>
-                    </article>
-                </div>
+                <article class="col-md-4 col-sm-6 portfolio-item">
+                  <header>
+                    <img src="front/img/portfolio/site-cv-rogner.png" />
+                    <h1>Site CV responsive</h1>
+                  </header>
+                  <div class="content">
+                    <p>Premier site CV entièrement responsive, réalisé avec Bootstrap..</p>
+                    <h2>Langages utilisées :</h2>
+                    <ul class="tags">
+                      <li class="html">HTML/CSS</li>
+                      <li class="js">JS</li>
+                      <li class="php">PHP</li>
+                    </ul>
+                  </div>
+                </article>
+                <article class="col-md-4 col-sm-6 portfolio-item">
+                  <header>
+                    <img src="front/img/portfolio/site-cv-rogner.png" />
+                    <h1>Portfolio Item Title</h1>
+                  </header>
+                  <div class="content">
+                    <p>Premier site CV entièrement responsive, réalisé avec Bootstrap.</p>
+                    <h2>Skills used:</h2>
+                    <ul class="tags">
+                      <li class="html">HTML</li>
+                      <li class="css">CSS</li>
+                      <li class="js">JavaScript</li>
+                    </ul>
+                  </div>
+                </article>
+                <article class="col-md-4 col-sm-6 portfolio-item">
+                  <header>
+                    <img src="front/img/portfolio/site-cv-rogner.png" />
+                    <h1>Portfolio Item Title</h1>
+                  </header>
+                  <div class="content">
+                    <p>A small description about the project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus minus quae suscipit a molestiae earum sunt velit ea impedit porro sit ducimus fugiat aliquam eligendi totam necessitatibus amet? Necessitatibus dignissimos.</p>
+                    <h2>Skills used:</h2>
+                    <ul class="tags">
+                      <li class="html">HTML</li>
+                      <li class="css">CSS</li>
+                      <li class="js">JavaScript</li>
+                    </ul>
+                  </div>
+                </article>
             </div>
         </div>
     </section>
