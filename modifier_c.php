@@ -1,14 +1,15 @@
 <?php session_start(); require_once('inc/connexion.php') ?>
 
-<?php 
+<?php
 
 	$id_competence = $_GET['id_competence'];
 	if($_POST){
-		
-		$niveau = $_POST['niveau'];
+
+		$percent_title = $_POST['percent_title'];
+		$percent_circle = $_POST['percent_circle'];
 		$competence = $_POST['competence'];
 
-		$update = $bdd->query("UPDATE competences SET competence = '$competence', niveau = '$niveau' WHERE id_competence = '$id_competence'  ");
+		$update = $bdd->query("UPDATE competences SET competence = '$competence', percent_title = '$percent_title', percent_circle = '$percent_circle' WHERE id_competence = '$id_competence'  ");
 		header('location: competences.php');
 	}
 
@@ -16,9 +17,9 @@
 
 <?php require_once('inc/haut.inc.php') ?>
 
-	<?php 
+	<?php
 		$query = $bdd -> query("SELECT * FROM competences WHERE id_competence = '$id_competence' ");
-		$ligne_c = $query -> fetch(); 
+		$ligne_c = $query -> fetch();
 	?>
 
 <h1>Modification des compétences</h1>
@@ -27,8 +28,11 @@
 		<label>Compétence</label><br>
 		<input class="competence" type="text" name="competence" value="<?= $ligne_c['competence'] ?>"><br>
 
-		<label>Niveau</label><br>
-		<input class="niveau" type="text" name="niveau" placeholder="Notion / Débutant / Intermédiaire / Confirmé" value="<?= $ligne_c['niveau'] ?>"><br>
+		<label>Titre niveau</label><br>
+		<input class="niveau" type="text" name="percent_title" placeholder="Pourcentage du niveau" value="<?= $ligne_c['percent_title'] ?>"><br>
+
+		<label>Cercle niveau</label><br>
+		<input class="niveau" type="text" name="percent_circle" placeholder="Faire 100 - le niveau de pourcentage" value="<?= $ligne_c['percent_circle'] ?>"><br>
 
 		<input class="submit" type="submit" value="Mettre à jour">
 </form>

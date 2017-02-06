@@ -1,11 +1,11 @@
-<?php 
-require_once('inc/connexion.php'); 
+<?php
+require_once('inc/connexion.php');
 
 $sql = $bdd -> query("SELECT * FROM user");
 $user = $sql -> fetch();
 
-$sql = $bdd -> query("SELECT * FROM competences");
-$competences = $sql -> fetchAll();
+
+
 
 $sql = $bdd -> query("SELECT * FROM experiences");
 $experiences = $sql -> fetchAll();
@@ -35,7 +35,7 @@ $langues = $sql -> fetchAll();
     <meta name="author" content="">
 
     <title> </title>
-    
+
     <!-- Bootstrap Core CSS -->
     <link href="front/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -117,7 +117,7 @@ $langues = $sql -> fetchAll();
 
     <div class="parallax-window" data-parallax="scroll" data-image-src="front/img/fond-montgolfiere.png">
     <!-- <div class="parallax-montgolfiere" data-parallax="scroll" data-image-src="front/img/montgolfiere.png">
-        
+
     </div> -->
         <header>
             <div class="container">
@@ -173,136 +173,27 @@ $langues = $sql -> fetchAll();
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-offset-2 col-md-2 text-center">
-                        <div class="col-md-12">
-                            <h3 class="text-center">HTML</h3>
-                        </div>
-                        <div class="o-progress-circle o-progress-circle--rounded">
-                            <div class="o-progress-circle__number">
-                                <span data-pourcent>75</span><em>%</em>
+                    <?php
+                    $sql = $bdd -> query("SELECT * FROM competences");
+                    while ($competences = $sql -> fetch()):
+                    ?>
+                        <div class="col-lg-3 text-center">
+                            <div class="col-lg-12">
+                                <h3 class="text-center"><?= $competences['competence']; ?></h3>
                             </div>
-                            <div class="o-progress-circle__fill">
-                                <svg class="icon" viewBox="0 0 40 40">
-                                    <circle r="15.9154943092" cy="20" cx="20" />
-                                    <circle r="15.9154943092" cy="20" cx="20" stroke-dashoffset="25" transform="rotate(-90,20,20)" />
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2 text-center">
-                        <div class="col-md-12">
-                            <h3 class="text-center">CSS</h3>
-                        </div>
-                        <div class="o-progress-circle o-progress-circle--rounded">
-                            <div class="o-progress-circle__number">
-                                <span data-pourcent>68</span><em>%</em>
-                            </div>
-                            <div class="o-progress-circle__fill">
-                                <svg class="icon" viewBox="0 0 40 40">
-                                    <circle r="15.9154943092" cy="20" cx="20" />
-                                    <circle r="15.9154943092" cy="20" cx="20" stroke-dashoffset="32" transform="rotate(-90,20,20)" />
-                                </svg>
+                            <div class="o-progress-circle o-progress-circle--rounded">
+                                <div class="o-progress-circle__number">
+                                    <span data-pourcent><?= $competences['percent_title'] ?></span>
+                                </div>
+                                <div class="o-progress-circle__fill">
+                                    <svg class="icon" viewBox="0 0 40 40">
+                                        <circle r="15.9154943092" cy="20" cx="20" />
+                                        <circle r="15.9154943092" cy="20" cx="20" stroke-dashoffset="<?= $competences['percent_circle'] ?>" transform="rotate(-90,20,20)" />
+                                    </svg>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-2 text-center">
-                        <div class="col-md-12">
-                            <h3 class="text-center">Bootstrap</h3>
-                        </div>
-                        <div class="o-progress-circle o-progress-circle--rounded">
-                            <div class="o-progress-circle__number">
-                                <span data-pourcent>80</span><em>%</em>
-                            </div>
-                            <div class="o-progress-circle__fill">
-                                <svg class="icon" viewBox="0 0 40 40">
-                                    <circle r="15.9154943092" cy="20" cx="20" />
-                                    <circle r="15.9154943092" cy="20" cx="20" stroke-dashoffset="20" transform="rotate(-90,20,20)" />
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2 text-center">
-                        <div class="col-md-12">
-                            <h3 class="text-center">Javascript</h3>
-                        </div>
-                        <div class="o-progress-circle o-progress-circle--rounded">
-                            <div class="o-progress-circle__number">
-                                <span data-pourcent>10</span><em>%</em>
-                            </div>
-                            <div class="o-progress-circle__fill">
-                                <svg class="icon" viewBox="0 0 40 40">
-                                    <circle r="15.9154943092" cy="20" cx="20" />
-                                    <circle r="15.9154943092" cy="20" cx="20" stroke-dashoffset="90" transform="rotate(-90,20,20)" />
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-offset-2 col-md-2 text-center">
-                        <div class="col-md-12">
-                            <h3 class="text-center">PHP</h3>
-                        </div>
-                        <div class="o-progress-circle o-progress-circle--rounded">
-                            <div class="o-progress-circle__number">
-                                <span data-pourcent>48</span><em>%</em>
-                            </div>
-                            <div class="o-progress-circle__fill">
-                                <svg class="icon" viewBox="0 0 40 40">
-                                    <circle r="15.9154943092" cy="20" cx="20" />
-                                    <circle r="15.9154943092" cy="20" cx="20" stroke-dashoffset="52" transform="rotate(-90,20,20)" />
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2 text-center">
-                        <div class="col-md-12">
-                            <h3 class="text-center">Wordpress</h3>
-                        </div>
-                        <div class="o-progress-circle o-progress-circle--rounded">
-                            <div class="o-progress-circle__number">
-                                <span data-pourcent>50</span><em>%</em>
-                            </div>
-                            <div class="o-progress-circle__fill">
-                                <svg class="icon" viewBox="0 0 40 40">
-                                    <circle r="15.9154943092" cy="20" cx="20" />
-                                    <circle r="15.9154943092" cy="20" cx="20" stroke-dashoffset="50" transform="rotate(-90,20,20)" />
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2 text-center">
-                        <div class="col-md-12">
-                            <h3 class="text-center">Photoshop</h3>
-                        </div>
-                        <div class="o-progress-circle o-progress-circle--rounded">
-                            <div class="o-progress-circle__number">
-                                <span data-pourcent>30</span><em>%</em>
-                            </div>
-                            <div class="o-progress-circle__fill">
-                                <svg class="icon" viewBox="0 0 40 40">
-                                    <circle r="15.9154943092" cy="20" cx="20" />
-                                    <circle r="15.9154943092" cy="20" cx="20" stroke-dashoffset="60" transform="rotate(-90,20,20)" />
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2 text-center">
-                        <div class="col-md-12">
-                            <h3 class="text-center">Ubuntu</h3>
-                        </div>
-                        <div class="o-progress-circle o-progress-circle--rounded">
-                            <div class="o-progress-circle__number">
-                                <span data-pourcent>35</span><em>%</em>
-                            </div>
-                            <div class="o-progress-circle__fill">
-                                <svg class="icon" viewBox="0 0 40 40">
-                                    <circle r="15.9154943092" cy="20" cx="20" />
-                                    <circle r="15.9154943092" cy="20" cx="20" stroke-dashoffset="65" transform="rotate(-90,20,20)" />
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endwhile; ?>
                 </div>
             </div>
         </section>
@@ -319,49 +210,49 @@ $langues = $sql -> fetchAll();
             </div>
             <div class="row">
                 <article class="col-md-4 col-sm-6 portfolio-item">
-                  <header>
-                    <img src="front/img/portfolio/site-cv-rogner.png" />
-                    <h1>Site CV responsive</h1>
-                  </header>
-                  <div class="content">
-                    <p>Premier site CV entièrement responsive, réalisé avec Bootstrap..</p>
-                    <h2>Langages utilisées :</h2>
-                    <ul class="tags">
-                      <li class="html">HTML/CSS</li>
-                      <li class="js">JS</li>
-                      <li class="php">PHP</li>
-                    </ul>
-                  </div>
+                    <header>
+                        <img src="front/img/portfolio/projet-site-cv.png" />
+                        <h1>Site CV</h1>
+                    </header>
+                    <div class="content">
+                        <p>Premier site CV entièrement responsive.</p>
+                        <h2>Langages utilisés :</h2>
+                        <ul class="tags">
+                            <li class="html">HTML</li>
+                            <li class="css">CSS</li>
+                            <li class="js">JavaScript</li>
+                        </ul>
+                    </div>
                 </article>
                 <article class="col-md-4 col-sm-6 portfolio-item">
-                  <header>
-                    <img src="front/img/portfolio/site-cv-rogner.png" />
-                    <h1>Portfolio Item Title</h1>
-                  </header>
-                  <div class="content">
-                    <p>Premier site CV entièrement responsive, réalisé avec Bootstrap.</p>
-                    <h2>Skills used:</h2>
-                    <ul class="tags">
-                      <li class="html">HTML</li>
-                      <li class="css">CSS</li>
-                      <li class="js">JavaScript</li>
-                    </ul>
-                  </div>
+                    <header>
+                        <img src="front/img/portfolio/e-boutique.png" />
+                        <h1>E-boutique</h1>
+                    </header>
+                    <div class="content">
+                        <p>Site E-boutique réalisé durant ma formation avec WF3.</p>
+                        <h2>Langages utilisés :</h2>
+                        <ul class="tags">
+                            <li class="html">HTML</li>
+                            <li class="css">CSS</li>
+                            <li class="js">JavaScript</li>
+                        </ul>
+                    </div>
                 </article>
                 <article class="col-md-4 col-sm-6 portfolio-item">
-                  <header>
-                    <img src="front/img/portfolio/site-cv-rogner.png" />
-                    <h1>Portfolio Item Title</h1>
-                  </header>
-                  <div class="content">
-                    <p>A small description about the project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus minus quae suscipit a molestiae earum sunt velit ea impedit porro sit ducimus fugiat aliquam eligendi totam necessitatibus amet? Necessitatibus dignissimos.</p>
-                    <h2>Skills used:</h2>
-                    <ul class="tags">
-                      <li class="html">HTML</li>
-                      <li class="css">CSS</li>
-                      <li class="js">JavaScript</li>
-                    </ul>
-                  </div>
+                    <header>
+                        <img src="front/img/portfolio/t-chat.png" />
+                        <h1>T-chat</h1>
+                    </header>
+                    <div class="content">
+                        <p>Chat réaliser avec le framework W</p>
+                        <h2>Langages utilisés :</h2>
+                        <ul class="tags">
+                            <li class="php">PHP</li>
+                            <li class="html">HTML</li>
+                            <li class="css">Ajax</li>
+                        </ul>
+                    </div>
                 </article>
             </div>
         </div>

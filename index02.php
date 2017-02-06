@@ -1,6 +1,6 @@
 <?php session_start(); require_once('inc/connexion.php'); ?>
 
-	
+
 <?php require_once('inc/haut.inc.php'); ?>
 
 <h1 id="title">Laurianne Michelot</h1>
@@ -13,19 +13,19 @@
 </div>
 <?php ?>
 <!--------------------------- BULLE PROFIL -->
-	<?php 
+	<?php
 	$pdo = $bdd -> query("SELECT * FROM user");
 	$ligne = $pdo -> fetch();
 	echo "<div id='info'>";
 		echo"<img class='avatar' src='img/" . $ligne['avatar'] . "' alt='avatar' width='160'>" . "<br><br>";
-		// "<h3>Coordonnées : </h3>" . 
+		// "<h3>Coordonnées : </h3>" .
 
 		echo isset($_SESSION['Auth']['prenom']) ? $_SESSION['Auth']['prenom'].' ' : $ligne['prenom'].' ';
 		echo isset($_SESSION['Auth']['nom']) ? $_SESSION['Auth']['nom'].'<br>' : $ligne['nom'].'<br>';
 		echo isset($_SESSION['Auth']['age']) ? $_SESSION['Auth']['age'].' ans <br>' : $ligne['age'].' ans <br>';
 		echo isset($_SESSION['Auth']['tel']) ? $_SESSION['Auth']['tel'].'<br>' : $ligne['tel'].'<br>';
 		echo isset($_SESSION['Auth']['adresse']) ? $_SESSION['Auth']['adresse'].'<br>' : $ligne['adresse'].'<br>';
-		  
+
 	echo "</div>";
 	echo "<div class='clear'></div>";
 
@@ -48,7 +48,7 @@
 		<tr>
 			<?php while ($ligne = $query -> fetch()) { ?>
 			<td><?php echo $ligne['competence']; ?></td>
-			<td><?php echo $ligne['niveau']; ?></td>
+			<td><?php echo $ligne['percent_title']; ?></td>
 		</tr>
 		<?php } ?>
 	</table>
@@ -101,5 +101,3 @@
 <div class='clear'></div>
 
 <?php require_once('inc/bas.inc.php') ?>
-
-

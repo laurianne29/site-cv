@@ -15,7 +15,7 @@ header {
 }
 
 section {
-	padding: 115px 0; 
+	padding: 115px 0;
 }
 
 /* ////////////////////////////////////////////////////////////////  LOADER /////////////////////////////////////////////////////////////////////// */
@@ -46,7 +46,7 @@ section {
 
 .navbar-custom .navbar-brand {
 	color: #BC2F47;
-	font-family: 'Amatic SC', cursive;
+	font-family: 'Amatic SC', arial;
 	font-size: 3em;
 	font-weight: bold;
 }
@@ -57,7 +57,7 @@ section {
 
   #header-nav li a{
   	  color: #BC2F47;
-  	  font-family: 'Amatic SC', cursive;
+  	  font-family: 'Amatic SC', arial;
   	  text-transform: capitalize;
   	  font-size: 2em;
   }
@@ -75,7 +75,7 @@ section {
 
 header .intro-text {
 	padding-top: 255px;
-	padding-bottom: 130px
+	padding-bottom: 130px;
 }
 
 header .intro-text .intro-heading {
@@ -83,7 +83,7 @@ header .intro-text .intro-heading {
 	text-transform: capitalize;
 	font-size: 6.5em;
 	font-weight: lighter;
-} 
+}
 header .intro-text .intro-lead-in {
 	font-family: 'Amatic SC', cursive;
 	font-style: normal;
@@ -140,7 +140,7 @@ header .intro-text .intro-lead-in {
 	font-family: 'Amatic SC', cursive;
 	letter-spacing: 4px;
 }
- 
+
 .fa-angle-double-down {
 	  margin-top: 120px;
 	  color: #C9324C;
@@ -314,6 +314,101 @@ header .intro-text .intro-lead-in {
 }
 /* //////////////////////////////////////////////////////////////////// FIN COMPETENCES //////////////////////////////////////////////////////////// */
 
+/* //////////////////////////////////////////////////////////////////// PROJETS ///////////////////////////////////////////////////////////////////// */
+
+#projets {
+	background: none;
+}
+
+#projets .description {
+	margin-top: 30px;
+}
+
+#projets .section-heading {
+	color: #2B374D;
+}
+
+#projets article {
+	margin: 100px auto 0;
+}
+
+#projets header {
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+#projets header img {
+	display: block;
+	width: 650px;
+	height: 450px;
+	position: absolute;
+	top: 50%;
+	margin-top: -200px;
+	left: 44%;
+	margin-left: -300px;
+	transform-origin: 50% 50%;
+	transform: scale(0.7);
+	transition: all 1s ease-in-out;
+}
+
+#projets header:hover img {
+	transform: scale(1) rotate(0);
+}
+
+#projets header h1 {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	font-family: 'Overlock', sans-serif;
+	font-size: 2.5em;
+	color: #fff;
+	text-transform: uppercase;
+	background: rgba(0,0,0,0.8);
+	padding: 0 0.3em;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#projets .content {
+	float: left; /* float left to restore height from floated tags */
+	background: #fff;
+	padding: 1em;
+	width: 100%;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+#projets .content h2 {
+	font-family: 'Overlock', sans-serif;
+	font-size: 1.875em;
+	margin-bottom: 0.25em;
+}
+
+#projets .tags li {
+	float: left;
+	background: #f2f2f2;
+	padding: 0 0.5em;
+	margin: 0 0.5em 0 0;
+	border-bottom-style: solid;
+	border-bottom-width: 3px;
+	list-style: none;
+}
+
+#projets .tags .html { border-bottom-color: #D25836; }
+#projets .tags .css { border-bottom-color: #246BAA; }
+#projets .tags .js { border-bottom-color: #F0DA50; }
+#projets .tags .bootstrap { border-bottom-color: #47326B; }
+#projets .tags .php { border-bottom-color: #6082BB; }
+
+
+/* /////////////////////////////////////////////////////////////////// FIN PROJETS /////////////////////////////////////////////////////////////////// */
+
 /*//////////////////////////////////////////////////////////////////// FORMATIONS / EXPERIENCES /////////////////////////////////////////////////// */
 
 #formations-exp .section-heading {
@@ -465,90 +560,6 @@ time {
 
 /* ///////////////////////////////////////////////////////////////////// FIN FORMATIONS ///////////////////////////////////////////////////////////// */
 
-/* //////////////////////////////////////////////////////////////////// PROJETS ///////////////////////////////////////////////////////////////////// */
-
-#projets {
-	background: none;
-}
-
-#projets .section-heading {
-	color: #2B374D;
-}
-
-#projets article {
-  width: 500px;
-  margin: 100px auto 0;
-}
-
-#projets header {
-  width: 440px;
-  height: 300px;
-  overflow: hidden;
-  position: relative;
-}
-
-#projets header img {
-  display: block;
-  width: 600px;
-  height: 400px;
-  position: absolute;
-  top: 50%;
-  margin-top: -200px;
-  left: 50%;
-  margin-left: -300px;
-  transform-origin: 50% 50%;
-  transform: scale(0.9) rotate(-5deg);
-  transition: all 1s ease-in-out;
-}
-
-#projets header:hover img {
-  transform: scale(1) rotate(0);
-}
-
-#projets header h1 {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-  font-size: 2.5em;
-  color: #fff;
-  text-transform: uppercase;
-  background: rgba(0,0,0,0.8);
-  padding: 0 0.3em;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-#projets .content {
-  float: left; /* float left to restore height from floated tags */
-  background: #fff;
-  padding: 1em;
-  width: 440px;
-}
-
-#projets .content h2 {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-  font-size: 1.875em;
-  margin-bottom: 0.25em;
-}
-
-#projets .tags li {
-  float: left;
-  background: #f2f2f2;
-  padding: 0 0.5em;
-  margin: 0 0.5em 0 0;
-  border-bottom-style: solid;
-  border-bottom-width: 3px;
-}
-
-#projets .tags .html { border-bottom-color: #e34c26; }
-#projets .tags .php { border-bottom-color: #2662e3; }
-#projets .tags .js { border-bottom-color: #8CC84B; }
-
-
-/* /////////////////////////////////////////////////////////////////// FIN PROJETS /////////////////////////////////////////////////////////////////// */
 
 /* ////////////////////////////////////////////////////////////////// MES INTERETS ////////////////////////////////////////////////////////////////// */
 
@@ -558,7 +569,7 @@ time {
 }
 
 .logo-loisir img {
-	margin: 0px 18px;
+	margin: 25px 18px;
 }
 
 /* //////////////////////////////////////////////////////////////////// ASIDE CV ////////////////////////////////////////////////////////////////// */
@@ -676,7 +687,7 @@ section#contact .form-group {
 section#contact .form-group input,
 section#contact .form-group textarea {
   padding: 20px;
-  border-radius: 30px;
+  border-radius: 8px;
 }
 section#contact .form-group input.form-control {
   height: auto;

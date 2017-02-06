@@ -3,11 +3,12 @@
 <?php
 
 	if (isset($_POST['competence'])) {
-		if ($_POST['competence']!='' && $_POST['niveau']!='') {
+		if ($_POST['competence']!='' && $_POST['percent_circle']!='' && $_POST['percent_title']!='') {
 			$competence = addslashes($_POST['competence']);
-			$niveau = addslashes($_POST['niveau']);
+			$percent_circle = addslashes($_POST['percent_circle']);
+			$percent_title = addslashes($_POST['percent_title']);
 
-		$bdd -> exec("INSERT INTO competences VALUES (NULL, '$competence', '$niveau')");
+		$bdd -> exec("INSERT INTO competences VALUES (NULL, '$competence', '$percent_circle', '$percent_title')");
 		header("location: competences.php");
 		exit();
 		}
@@ -30,8 +31,11 @@
 		<label>Compétence</label><br>
 		<input class="competence" type="text" name="competence" placeholder="Insérer une compétence..."><br>
 
-		<label>Niveau</label><br>
-		<input class="niveau" type="text" name="niveau" placeholder="Notion / Débutant / Intermédiaire / Confirmé"><br>
+		<label>Titre niveau</label><br>
+		<input class="niveau" type="text" name="percent_title" placeholder="Pourcentage du niveau"><br>
+
+		<label>Cercle niveau</label><br>
+		<input class="niveau" type="text" name="percent_circle" placeholder="Faire 100 - le niveau de pourcentage"><br>
 
 		<input class="submit" type="submit" value="Insérer une nouvelle compétence">
 	</form>
@@ -43,14 +47,16 @@
 	<table id="competences" border="1">
 		<thead>
 			<th>Compétences</th>
-			<th>Niveau</th>
+			<th>Titre niveau</th>
+			<th>Cercle niveau</th>
 			<th>Modifier</th>
 			<th>Supprimer</th>
 		</thead>
 		<tr>
 			<?php while ($ligne = $query -> fetch()) { ?>
 			<td><?php echo $ligne['competence']; ?></td>
-			<td><?php echo $ligne['niveau']; ?></td>
+			<td><?php echo $ligne['percent_title']; ?></td>
+			<td><?php echo $ligne['percent_circle']; ?></td>
 			<td><a href="modifier_c.php?id_competence=<?php echo $ligne['id_competence']; ?>"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a></td>
 			<td><a href="competences.php?id_competence=<?php echo $ligne['id_competence']; ?>"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></a></td>
 		</tr>
