@@ -37,7 +37,7 @@ section {
 
 .parallax-montgolfiere {
 	min-height: 150px;
-	background: transparent;
+	background: none;
 }
 
 /* ////////////////////////////////////////////////////////////////  FIN DU PARALLAX ///////////////////////////////////////////////////////////// */
@@ -47,8 +47,11 @@ section {
 .navbar-custom .navbar-brand {
 	color: #BC2F47;
 	font-family: 'Amatic SC', arial;
-	font-size: 3em;
+	font-size: 3.5em;
 	font-weight: bold;
+}
+.navbar-custom.affix .navbar-brand {
+	font-size: 3.3em;
 }
 
 .navbar-custom .navbar-brand:hover {
@@ -59,7 +62,7 @@ section {
   	  color: #BC2F47;
   	  font-family: 'Amatic SC', arial;
   	  text-transform: capitalize;
-  	  font-size: 2em;
+  	  font-size: 2.3em;
   }
 
   #header-nav li a:hover {
@@ -74,8 +77,8 @@ section {
 }*/
 
 header .intro-text {
-	padding-top: 255px;
-	padding-bottom: 130px;
+	padding-top: 240px;
+	padding-bottom: 140px;
 }
 
 header .intro-text .intro-heading {
@@ -125,10 +128,10 @@ header .intro-text .intro-lead-in {
 	/* GRANDE TABLETTE PAYSAGE + ORDI */
 	@media screen and (min-width: 992px) {
 		header .intro-text .intro-heading {
-			font-size: 6em;
+			font-size: 6.7em;
 		}
 		header .intro-text .intro-lead-in {
-	 		font-size: 3.2em;
+	 		font-size: 3.7em;
 	 	}
 	}
 
@@ -241,8 +244,14 @@ header .intro-text .intro-lead-in {
 }
 
 #competences .container h2 {
-	color: #D0B1B7;
+	color: #242F45;
 }
+
+/*#competences img[title="$competences['titre-img']"] {
+	background: #333;
+	padding: 5px;
+	color: snow;
+}*/
 
 .icon {
   width: 100%;
@@ -257,7 +266,7 @@ header .intro-text .intro-lead-in {
 .o-progress-circle__fill circle {
   fill: none;
   stroke-width: 1.3px;
-  /*stroke: #3C0F17;*/
+  stroke: #D197A1;
   box-shadow: 0px 0px 10px 4px rgba(61, 61, 61, 0.8);
 -moz-box-shadow: 0px 0px 10px 4px rgba(61, 61, 61, 0.8);
 -webkit-box-shadow: 0px 0px 10px 4px rgba(61, 61, 61, 0.8);
@@ -278,7 +287,7 @@ header .intro-text .intro-lead-in {
   right: 0;
   display: inline-block;
   margin: auto;
-  height: 10rem;
+  height: 8rem;
   width: 100%;
   font-family: arial, sans-serif;
   color: rgba(255, 255, 255, 0.88);
@@ -325,7 +334,7 @@ header .intro-text .intro-lead-in {
 }
 
 #projets .section-heading {
-	color: #2B374D;
+	color: #F45B69;
 }
 
 #projets article {
@@ -412,7 +421,7 @@ header .intro-text .intro-lead-in {
 /*//////////////////////////////////////////////////////////////////// FORMATIONS / EXPERIENCES /////////////////////////////////////////////////// */
 
 #formations-exp .section-heading {
-	color: #D0B1B7;
+	color: #F45B69;
 }
 
 /* ||||||||||||||||||||||| TIMELINE ||||||||||||||||||||||| */
@@ -563,6 +572,9 @@ time {
 
 /* ////////////////////////////////////////////////////////////////// MES INTERETS ////////////////////////////////////////////////////////////////// */
 
+#interets .section-heading {
+	color: #242F45;
+}
 .logo-loisir p {
 	font-size: 1em;
 	font-family: 'Overlock', arial, sans-serif;

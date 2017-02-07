@@ -13,7 +13,7 @@ if ($_POST) {
 	$pseudo = $_POST['pseudo'];
 	$mdp = $_POST['mdp'];
 	// requêtes sql qui permet de vérifier si les identifiant sont correcte
-	
+
 	$query = $bdd -> prepare("SELECT * FROM user,competences,experiences WHERE pseudo = :pseudo && mdp = :mdp");
 	$query -> bindParam(':pseudo',$pseudo, PDO::PARAM_STR);
 	$query -> bindParam(':mdp',$mdp, PDO::PARAM_STR);
@@ -36,7 +36,7 @@ if ($_POST) {
 	}
 
 }
-?>:
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +46,7 @@ if ($_POST) {
 	<link rel="stylesheet" href="framework/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-
+<span><a href="index.php">-> Site cv</a></span>
 <h1 id="title-co">Connexion</h1>
 <form id="connexion" action="connexion.php" method="POST">
 	<label>Pseudo</label><br>
@@ -57,7 +57,7 @@ if ($_POST) {
 
 	<input name="connexion" type="submit" value="Connexion">
 </form>
-	
+
 </body>
 </html>
 
