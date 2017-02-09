@@ -116,11 +116,11 @@ $langues = $sql -> fetchAll();
     <!-- UTILISATEUR -->
 
     <div class="parallax-window" data-parallax="scroll" data-image-src="front/img/fond-montgolfiere.png">
-    <!-- <div class="parallax-montgolfiere" data-parallax="scroll" data-image-src="front/img/montgolfiere.png">
-
-    </div> -->
         <header>
             <div class="container">
+                <div class="parallax-montgolfiere" data-parallax="scroll" data-image-src="front/img/montgolfiere.png">
+                    <img src="front/img/montgolfiere.png" alt="montgolfiere">
+                </div>
                 <div class="intro-text">
                     <div class="intro-heading">
                         <?php echo $user['prenom'] . ' ' . $user['nom']; ?>
@@ -177,7 +177,7 @@ $langues = $sql -> fetchAll();
 
     <!--/////////////////////////////////////////////////////////// SECTION EXPERIENCES / FORMATIONS ///////////////////////////////////////////////////////////-->
 
-    <div class="parallax-window" data-parallax="scroll" data-image-src="front/img/montgolfiere.jpg">
+    <div class="parallax-window" data-parallax="scroll" data-image-src="front/img/fond-montgolfiere.png">
         <section id="formations-exp">
             <div class="container">
                 <div class="row">
@@ -279,7 +279,7 @@ $langues = $sql -> fetchAll();
     </section>
 
     <!--////////////////////////////////////////////////////////////////// PROJET //////////////////////////////////////////////////////////////////-->
-    <div class="parallax-window" data-parallax="scroll" data-image-src="front/img/montgolfiere.jpg">
+    <div class="parallax-window" data-parallax="scroll" data-image-src="front/img/fond-montgolfiere.png">
         <section id="projets">
             <div class="container">
                 <div class="row">
@@ -359,9 +359,13 @@ $langues = $sql -> fetchAll();
                     <h2 class="section-heading">Contactez-moi !</h2>
                     <h3 class="section-subheading text-muted">Un projet ? Mon profil vous intéresse ? N'hésitez pas à me contacter !</h3>
                 </div>
-                <div class="col-lg-12">
-                    <i class="fa fa-phone fa-3" aria-hidden="true">06 99 90 37 85</i>
-                    <i class="fa fa-envelope fa-3" aria-hidden="true">lauriannemichelot@gmail.com</i>
+            </div>
+            <div id="ico-contact" class="row">
+                <div class="col-lg-6">
+                    <i class="fa fa-phone fa-2x" aria-hidden="true"> 06 99 90 37 85</i>
+                </div>
+                <div class="col-lg-6 text-right">
+                    <i class="fa fa-envelope fa-2x" aria-hidden="true"> lauriannemichelot@gmail.com</i>
                 </div>
             </div>
             <div class="row">

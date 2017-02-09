@@ -78,7 +78,7 @@ section {
 
 header .intro-text {
 	padding-top: 240px;
-	padding-bottom: 140px;
+	padding-bottom: 150px;
 }
 
 header .intro-text .intro-heading {
@@ -86,12 +86,14 @@ header .intro-text .intro-heading {
 	text-transform: capitalize;
 	font-size: 6.5em;
 	font-weight: lighter;
+	text-shadow: 2px 1px 2px black;
 }
 header .intro-text .intro-lead-in {
 	font-family: 'Amatic SC', cursive;
 	font-style: normal;
 	letter-spacing: 5px;
 	font-size: 3.2em;
+	text-shadow: 1px 0px 2px black;
 }
 
 /* ||||||||||||||||||||||||||| MEDIA QUERIES ||||||||||||||||||||||||||| */
@@ -364,6 +366,15 @@ header .intro-text .intro-lead-in {
 	transition: all 1s ease-in-out;
 }
 
+@media screen and (min-width: 501px) and (max-width: 642px){
+	#projets header img {
+		width: 870px;
+		height: 520px;
+		top: 40%;
+		left: 27%;
+	}
+}
+
 #projets header:hover img {
 	transform: scale(1) rotate(0);
 }
@@ -391,6 +402,12 @@ header .intro-text .intro-lead-in {
 	width: 100%;
 	border-bottom-left-radius: 8px;
 	border-bottom-right-radius: 8px;
+}
+
+@media screen and (min-width: 501px) and (max-width: 768px){
+	#projets .content {
+		margin-bottom: 40px;
+	}
 }
 
 #projets .content h2 {
@@ -651,6 +668,7 @@ time {
 /* /////////////////////////////////////////////////////////////////////////// CONTACT //////////////////////////////////////////////////////////// */
 
 section#contact {
+	background: none;
 	animation: pulse 4s infinite;
 }
 	@keyframes pulse {
@@ -665,8 +683,12 @@ section#contact {
 		}
 	}
 
-section#contact {
-	background: none;
+section #contact fa-envelope {
+	color: snow;
+}
+
+section #contact #ico-contact {
+	margin-bottom: 20px;
 }
 
 /* ||||||||||||||||||||| FORMULAIRE ||||||||||||||||||||| */
