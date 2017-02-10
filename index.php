@@ -118,9 +118,9 @@ $langues = $sql -> fetchAll();
     <div class="parallax-window" data-parallax="scroll" data-image-src="front/img/fond-montgolfiere.png">
         <header>
             <div class="container">
-                <div class="parallax-montgolfiere" data-parallax="scroll" data-image-src="front/img/montgolfiere.png">
+                <!-- <div class="parallax-montgolfiere" data-parallax="scroll" data-image-src="front/img/montgolfiere.png">
                     <img src="front/img/montgolfiere.png" alt="montgolfiere">
-                </div>
+                </div> -->
                 <div class="intro-text">
                     <div class="intro-heading">
                         <?php echo $user['prenom'] . ' ' . $user['nom']; ?>
