@@ -146,7 +146,7 @@ $langues = $sql -> fetchAll();
             <div class="row">
                 <div class="col-md-12">
                     <h2 class="section-heading text-center">Compétences numériques</h2>
-                    <h3 class="section-subheading text-muted text-center">En veille technique permanante ! Actuellement, je renforce mes connaissance en Javascript et en Ajax.</h3>
+                    <h3 class="section-subheading text-muted text-center">En veille technique permanente !<br> Actuellement, je renforce mes connaissance en Javascript et en Ajax.</h3>
                 </div>
             </div>
             <div class="row">
@@ -351,7 +351,7 @@ $langues = $sql -> fetchAll();
     </aside>
 
     <!--////////////////////////////////////////////////////////////////// SECTION CONTACTEZ-MOI //////////////////////////////////////////////////////////////// -->
-
+<div class="parallax-contact" data-parallax="scroll" data-image-src="front/img/abstract.png">
     <section id="contact">
         <div class="container">
             <div class="row">
@@ -360,6 +360,7 @@ $langues = $sql -> fetchAll();
                     <h3 class="section-subheading text-muted">Un projet ? Mon profil vous intéresse ? N'hésitez pas à me contacter !</h3>
                 </div>
             </div>
+            <!-- pictos phone & mail -->
             <div id="ico-contact" class="row">
                 <div class="col-lg-6">
                     <i class="fa fa-phone fa-2x" aria-hidden="true"> 06 99 90 37 85</i>
@@ -368,34 +369,45 @@ $langues = $sql -> fetchAll();
                     <i class="fa fa-envelope fa-2x" aria-hidden="true"> lauriannemichelot@gmail.com</i>
                 </div>
             </div>
+            <!-- formulaire -->
             <div class="row">
                 <div class="col-lg-12">
-                    <form name="sentMessage" id="contactForm" novalidate>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Votre nom et prénom *" id="name" required data-validation-required-message="Please enter your name.">
+                    <form name="sentMessage" id="contactForm" method="POST">
+                        <div class="row text-center">
+                            <?php require_once('front/mail/contact_me.php') ?>
+                            <div class="col-md-6 col-md-offset-1" id="input-left">
+                                <!-- nom -->
+                                <div class="form-group col-md-6">
+                                    <input type="text" class="form-control" name="nom" placeholder="Votre nom *" id="nom" required data-validation-required-message="Veuillez entrer votre nom">
                                     <p class="help-block text-danger"></p>
                                 </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Votre Email *" id="email" required data-validation-required-message="Please enter your email address.">
+                                <!-- prenom -->
+                                <div class="form-group col-md-6">
+                                    <input type="text" class="form-control" name="prenom" placeholder="Votre prenom *" id="prenom" required data-validation-required-message="Veuillez entrer votre prenom">
                                     <p class="help-block text-danger"></p>
                                 </div>
-                                <div class="form-group">
-                                    <input type="tel" class="form-control" placeholder="Votre numéro de téléphone *" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                <!-- email -->
+                                <div class="form-group col-md-12">
+                                    <input type="email" class="form-control" name="email" placeholder="Votre Email *" id="email" required data-validation-required-message="Veuillez entrer votre adresse email.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <!-- tel -->
+                                <div class="form-group col-md-12">
+                                    <input type="tel" class="form-control" name="tel" placeholder="Votre numéro de téléphone *" id="tel" required data-validation-required-message="Veuillez entrer votre numéro de téléphone.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-5">
+                                <!-- message -->
                                 <div class="form-group">
-                                    <textarea class="form-control" placeholder="Votre message *" id="message" required data-validation-required-message="S'il-vous-plaît entrez un message"></textarea>
+                                    <textarea class="form-control" name="message" placeholder="Votre message *" id="message" required data-validation-required-message="S'il-vous-plaît entrez un message"></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
                             <div class="col-lg-12">
                                 <div id="success"></div>
-                                <div class="button"><a href="#">Envoyer !</a></div>
+                                <button class="button"><a href="#">Envoyer !</a></button>
                             </div>
                         </div>
                     </form>
@@ -403,6 +415,7 @@ $langues = $sql -> fetchAll();
             </div>
         </div>
     </section>
+</div>
 
     <footer>
         <div class="container">
@@ -449,6 +462,9 @@ $langues = $sql -> fetchAll();
     <!-- Theme parallax -->
     <script src="front/js/parallax.js-1.4.2/parallax.js"></script>
     <script src="front/js/parallax.js-1.4.2/parallax1.js"></script>
+    <!-- <script src="front/js/parallax.js-1.4.2/jquery.parallax-1.1.3.js"></script>
+    <script src="front/js/parallax.js-1.4.2/jquery.localscroll-1.2.7-min.js"></script>
+    <script src="front/js/parallax.js-1.4.2/jquery.scrollTo-1.4.2-min.js"></script> -->
 
     <!--  Script principal-->
     <script src="front/js/main.js"></script>

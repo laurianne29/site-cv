@@ -59,10 +59,10 @@ section {
 }
 
   #header-nav li a{
-  	  color: #BC2F47;
+  	  color: #ED6679;
   	  font-family: 'Amatic SC', arial;
   	  text-transform: capitalize;
-  	  font-size: 2.3em;
+  	  font-size: 2.6em;
   }
 
   #header-nav li a:hover {
@@ -86,14 +86,14 @@ header .intro-text .intro-heading {
 	text-transform: capitalize;
 	font-size: 6.5em;
 	font-weight: lighter;
-	text-shadow: 2px 1px 2px black;
+	/*text-shadow: 2px 1px 2px black;*/
 }
 header .intro-text .intro-lead-in {
 	font-family: 'Amatic SC', cursive;
 	font-style: normal;
 	letter-spacing: 5px;
 	font-size: 3.2em;
-	text-shadow: 1px 0px 2px black;
+	/*text-shadow: 1px 0px 2px black;*/
 }
 
 /* ||||||||||||||||||||||||||| MEDIA QUERIES ||||||||||||||||||||||||||| */
@@ -133,7 +133,7 @@ header .intro-text .intro-lead-in {
 			font-size: 6.7em;
 		}
 		header .intro-text .intro-lead-in {
-	 		font-size: 3.7em;
+	 		font-size: 4.7em;
 	 	}
 	}
 
@@ -666,9 +666,15 @@ time {
 /* /////////////////////////////////////////////////////////////////////////// FIN ASIDE CV /////////////////////////////////////////////////////// */
 
 /* /////////////////////////////////////////////////////////////////////////// CONTACT //////////////////////////////////////////////////////////// */
-section#contact {
-	background: url('../img/amazing.jpg');
+.parallax-contact {
+	min-height: 400px;
+	background: transparent;
+}
+
+section#contact{
+	background: url('../img/fond-montgolfiere.png');
 	background-size: cover;
+	background-position: 50% 30%;
 }
 
 /*section#contact {
@@ -687,12 +693,13 @@ section#contact {
 		}
 	}*/
 
-section #contact fa-envelope {
+section #contact fa-envelope, fa-phone {
 	color: snow;
 }
 
 section #contact #ico-contact {
 	margin-bottom: 20px;
+	font-family: 'Overlock', arial, sans-serif;
 }
 
 /* ||||||||||||||||||||| FORMULAIRE ||||||||||||||||||||| */
@@ -719,29 +726,39 @@ section .button a:hover {
 
 /* F O R M */
 section #contactForm {
-	/*background: #242F45;*/
 	background: rgba(0,0,0,.5);
-	padding: 45px;
-	border-radius: 10px;
+	padding-top: 45px;
+	padding-bottom: 45px;
+	border-radius: 13px;
 }
 
 section#contact .form-group input {
-	padding: 20px;
 	background: none;
+	color: snow;
+	font-family: 'Overlock', arial, sans-serif;
+	font-size: 1.2em;
+	padding: 10px;
 	border: none;
+	border-radius: 0;
 	border-bottom: 1px solid snow;
+}
+section#contact #input-left {
+	width: 450px;
 }
 section#contact .form-group textarea {
 	background: none;
+	color: snow;
+	font-family: 'Overlock', arial, sans-serif;
+	font-size: 1.2em;
 	border-bottom: 1px solid snow;
 	border-left: 1px solid snow;
 }
 
-
-/*section#contact .section-heading {
-  color: white;
+section#contact button {
+	background: none;
 }
-section#contact .form-group {
+
+/*section#contact .form-group {
   margin-bottom: 25px;
 }
 

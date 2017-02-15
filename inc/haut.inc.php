@@ -20,6 +20,7 @@
 	<nav>
 		<ul>
 			<li><a href="index02.php" id="<?=menuIsActive('index');?>">Mon profil</a></li>
+			<li><a href="utilisateur.php" id="<?=menuIsActive('user');?>">Utilisateur</a></li>
 			<li><a href="competences.php" id="<?=menuIsActive('competences');?>">Compétences</a></li>
 			<li><a href="experiences.php" id="<?=menuIsActive('experiences');?>">Expériences</a></li>
 			<li><a href="formations.php" id="<?=menuIsActive('formations');?>">Formations</a></li>
@@ -31,5 +32,5 @@
 		</ul>
 	<?php endif;?>
 	</nav>
-	
+
 	<section id="main-content">
