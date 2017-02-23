@@ -693,13 +693,19 @@ section#contact{
 		}
 	}*/
 
-section #contact fa-envelope, fa-phone {
-	color: snow;
+section#contact .fa-2x {
+	font-size: 1.8em;
 }
 
-section #contact #ico-contact {
-	margin-bottom: 20px;
-	font-family: 'Overlock', arial, sans-serif;
+/* MOBILE PORTRAIT & MOBILE PAYSAGE */
+@media screen and (max-width: 600px) {
+	section#contact .fa-2x {
+		font-size: 1.3em;
+	}
+}
+
+section#contact #ico-contact p{
+	font-family: 'Lato', sans-serif;
 }
 
 /* ||||||||||||||||||||| FORMULAIRE ||||||||||||||||||||| */
@@ -742,9 +748,29 @@ section#contact .form-group input {
 	border-radius: 0;
 	border-bottom: 1px solid snow;
 }
+
+/* MOBILE PORTRAIT & MOBILE PAYSAGE */
+ @media screen and (max-width: 600px) {
+	section#contact .form-group input, section#contact #input-left   {
+		width: 230px;
+		margin: auto;
+		padding: none;
+	}
+
+}
+
+/* MOBILE PORTRAIT & MOBILE PAYSAGE */
+ @media screen and (min-width: 600px) and (max-width: 728px){
+	section#contact .form-group input, section#contact #input-left   {
+		margin: auto;
+	}
+
+}
+
 section#contact #input-left {
 	width: 450px;
 }
+
 section#contact .form-group textarea {
 	background: none;
 	color: snow;
@@ -753,6 +779,16 @@ section#contact .form-group textarea {
 	border-bottom: 1px solid snow;
 	border-left: 1px solid snow;
 }
+
+/* MOBILE PORTRAIT & MOBILE PAYSAGE */
+ @media screen and (max-width: 600px) {
+	section#contact .form-group textarea {
+		width: 250px;
+		margin: auto;
+	}
+}
+
+
 
 section#contact button {
 	background: none;

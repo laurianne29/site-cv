@@ -363,10 +363,10 @@ $langues = $sql -> fetchAll();
             <!-- pictos phone & mail -->
             <div id="ico-contact" class="row">
                 <div class="col-lg-6">
-                    <i class="fa fa-phone fa-2x" aria-hidden="true"> 06 99 90 37 85</i>
+                    <p class="text-muted text-center"><i class="fa fa-phone fa-2x" aria-hidden="true"> 06 99 90 37 85</i></p>
                 </div>
-                <div class="col-lg-6 text-right">
-                    <i class="fa fa-envelope fa-2x" aria-hidden="true"> lauriannemichelot@gmail.com</i>
+                <div class="col-lg-6">
+                    <p class="text-muted text-center"><i class="fa fa-envelope fa-2x" aria-hidden="true"> lauriannemichelot@gmail.com</i></p>
                 </div>
             </div>
             <!-- formulaire -->
@@ -377,12 +377,12 @@ $langues = $sql -> fetchAll();
                             <?php require_once('front/mail/contact_me.php') ?>
                             <div class="col-md-6 col-md-offset-1" id="input-left">
                                 <!-- nom -->
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-6 col-sm-6">
                                     <input type="text" class="form-control" name="nom" placeholder="Votre nom *" id="nom" required data-validation-required-message="Veuillez entrer votre nom">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <!-- prenom -->
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-6 col-sm-6">
                                     <input type="text" class="form-control" name="prenom" placeholder="Votre prenom *" id="prenom" required data-validation-required-message="Veuillez entrer votre prenom">
                                     <p class="help-block text-danger"></p>
                                 </div>
