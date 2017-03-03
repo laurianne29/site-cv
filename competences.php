@@ -5,13 +5,18 @@
 	if (isset($_POST['competence'])) {
 		if ($_POST['competence']!='' && $_POST['percent_circle']!='' && $_POST['percent_title']!='') {
 			$competence = addslashes($_POST['competence']);
+			$titre_image = addslashes($_POST['titre-img']);
 			$percent_circle = addslashes($_POST['percent_circle']);
 			$percent_title = addslashes($_POST['percent_title']);
 
-		$bdd -> exec("INSERT INTO competences VALUES (NULL, '$competence', '$percent_circle', '$percent_title')");
+		$bdd -> exec("INSERT INTO competences VALUES (NULL, '$competence','$titre_image','$percent_circle', '$percent_title')");
 		header("location: competences.php");
 		exit();
+
+
 		}
+
+
 	}
 
 	// Suppression d'une compétence
@@ -27,9 +32,12 @@
 
 <h1>Les compétences</h1>
 
-	<form id="formulaire" action="competences.php" method="post">
+	<form id="formulaire"  method="post">
 		<label>Compétence</label><br>
 		<input class="competence" type="text" name="competence" placeholder="Insérer une compétence..."><br>
+
+		<label>Titre image</label><br>
+		<input class="competence" type="text" name="titre-img" placeholder="Insérez une image"><br>
 
 		<label>Titre niveau</label><br>
 		<input class="niveau" type="text" name="percent_title" placeholder="Pourcentage du niveau"><br>
@@ -41,12 +49,13 @@
 	</form>
 
 	<?php
-		$query = $bdd -> query("SELECT * FROM competences");
+		$query = $bdd -> query("SELECT * FROM competences ORDER BY id_competence DESC");
 	?>
 
 	<table id="competences" border="1">
 		<thead>
 			<th>Compétences</th>
+			<th>Titre image</th>
 			<th>Titre niveau</th>
 			<th>Cercle niveau</th>
 			<th>Modifier</th>
@@ -54,6 +63,7 @@
 		</thead>
 		<tr>
 			<?php while ($ligne = $query -> fetch()) { ?>
+			<td><?php echo $ligne['titre-img']; ?></td>
 			<td><?php echo $ligne['competence']; ?></td>
 			<td><?php echo $ligne['percent_title']; ?></td>
 			<td><?php echo $ligne['percent_circle']; ?></td>

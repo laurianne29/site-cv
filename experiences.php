@@ -1,7 +1,7 @@
 <?php session_start(); require_once('inc/connexion.php'); ?>
 
 <?php
-	
+
 	if (isset($_POST['experience'])) {
 		if (!empty($_POST['experience']) && !empty($_POST['taches']) && !empty($_POST['dates']) && !empty($_POST['lieu'])) {
 			$experiences = addslashes($_POST['experience']);

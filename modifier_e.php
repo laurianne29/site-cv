@@ -4,7 +4,7 @@
 
 	$id_experience = $_GET['id_experience'];
 	if($_POST){
-		
+
 		$experience = $_POST['experience'];
 		$taches = $_POST['taches'];
 		$dates = $_POST['dates'];
@@ -17,7 +17,7 @@
 ?>
 <?php require_once('inc/haut.inc.php') ?>
 
-<?php 
+<?php
 	$query = $bdd -> query("SELECT * FROM experiences WHERE id_experience = '$id_experience' ");
 	$ligne_e = $query -> fetch();
 ?>

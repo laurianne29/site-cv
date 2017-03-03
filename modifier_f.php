@@ -1,15 +1,16 @@
 <?php session_start(); require_once('inc/connexion.php') ?>
 
-<?php 
+<?php
 
 	$id_formation = $_GET['id_formation'];
 	if($_POST){
-		
+
 		$formation = $_POST['formation'];
 		$description = $_POST['description'];
 		$dates_formation = $_POST['dates_formation'];
+		$lieu = $_POST['lieu'];
 
-		$update = $bdd->query("UPDATE formation SET formation = '$formation', description = '$description', dates_formation = '$dates_formation' WHERE id_formation = '$id_formation'  ");
+		$update = $bdd->query("UPDATE formation SET formation = '$formation', description = '$description', dates_formation = '$dates_formation', lieu = '$lieu' WHERE id_formation = '$id_formation'  ");
 		header('location: formations.php');
 	}
 
@@ -17,7 +18,7 @@
 
 <?php require_once('inc/haut.inc.php') ?>
 
-	<?php 
+	<?php
 		$query = $bdd -> query("SELECT * FROM formation WHERE id_formation = '$id_formation' ");
 		$ligne_c = $query -> fetch();
 	?>
@@ -33,6 +34,9 @@
 
 		<label>Date de la formation</label><br>
 		<input class="dates_formation" type="text" name="dates_formation" value="<?= $ligne_c['dates_formation'] ?>"><br>
+
+		<label>Lieux</label><br>
+		<input class="formation" type="text" name="lieu" value="<?= $ligne_c['lieu'] ?>"><br>
 
 		<input class="submit" type="submit" value="Mettre à jour">
 </form>
