@@ -156,7 +156,7 @@ $langues = $sql -> fetchAll();
                 ?>
                     <div class="col-lg-3 text-center">
                         <div class="col-lg-12">
-                            <img class="text-center" <?= 'src="front/img/skills/' . $competences['competence'] . '" title="'. $competences['titre-img'] .'" '; ?> ></img>
+                            <img class="text-center" <?= 'src="front/img/skills/' . $competences['competence'] . '" title="'. $competences['titre_img'] .'" '; ?> ></img>
                         </div>
                         <div class="o-progress-circle o-progress-circle--rounded">
                             <div class="o-progress-circle__number">
@@ -265,14 +265,16 @@ $langues = $sql -> fetchAll();
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="description text-center">
-                        <h4>Langues</h4>
-                        <p><?= $langues[0]['langue'] .' : '. $langues[0]['niveau'] ?></p>
-                        <p><?= $langues[1]['langue'] .' : '. $langues[1]['niveau'] ?></p>
-                        <p><?= $langues[2]['langue'] .' : '. $langues[2]['niveau'] ?></p>
-                    </div>
+            <div class="row" id="langues">
+                <h4 class="text-center">Langues</h4>
+                <div class="col-lg-4 text-center langues">
+                    <p><?= $langues[0]['langue'] .' : '. $langues[0]['niveau'] ?></p>
+                </div>
+                <div class="col-lg-4 text-center langues">
+                    <p><?= $langues[1]['langue'] .' : '. $langues[1]['niveau'] ?></p>
+                </div>
+                <div class="col-lg-4 text-center langues">
+                    <p><?= $langues[2]['langue'] .' : '. $langues[2]['niveau'] ?></p>
                 </div>
             </div>
         </div>
@@ -375,7 +377,7 @@ $langues = $sql -> fetchAll();
                     <form name="sentMessage" id="contactForm" method="POST">
                         <div class="row text-center">
                             <?php require_once('front/mail/contact_me.php') ?>
-                            <div class="col-md-6 col-md-offset-1" id="input-left">
+                            <div class="col-md-6" id="input-left">
                                 <!-- nom -->
                                 <div class="form-group col-md-6 col-sm-6">
                                     <input type="text" class="form-control" name="nom" placeholder="Votre nom *" id="nom" required data-validation-required-message="Veuillez entrer votre nom">

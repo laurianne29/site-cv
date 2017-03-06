@@ -51,28 +51,22 @@ table {
 body {
 	/*font-family: arial, helvetica, sans-serif;*/
 	font-family: 'Raleway', sans-serif;
-	background: #333;
-	color: #333;
+	background-color: #333 !important;
+	color: #333 !important;
 }
 
-#title-co {
-	color: snow;
-	font-size: 1.6em;
-	text-align: center;
-	margin: 30px 0 50px;
-}
-
-#connexion {
-	width: 450px;
+.login-container {
+	/* max-width: 350px; */
 	background: snow;
 	padding: 15px;
 	border-radius: 5px;
-	margin: 15px auto;
+	margin-top: 15px;
+	box-shadow: 1px 0px 15px rgba(0, 0, 0, 0.9);
 }
-	#connexion label{
-		margin: 0 auto;
-	}
 
+#pseudo, #mdp {
+	margin-bottom: 10px;
+}
 /************************************************************************** DEBUT DU HEADER */
 
 header{

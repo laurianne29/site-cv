@@ -6,11 +6,11 @@
 	if($_POST){
 
 		$percent_title = $_POST['percent_title'];
-		$titre_image = $_POST['titre-img'];
+		$titre_image = $_POST['titre_img'];
 		$percent_circle = $_POST['percent_circle'];
 		$competence = $_POST['competence'];
 
-		$update = $bdd->query("UPDATE competences SET competence = '$competence', titre-img = '$titre_image', percent_title = '$percent_title', percent_circle = '$percent_circle' WHERE id_competence = '$id_competence'  ");
+		$update = $bdd->query("UPDATE competences SET competence = '$competence', titre_img = '$titre_image', percent_title = '$percent_title', percent_circle = '$percent_circle' WHERE id_competence = '$id_competence'  ");
 		header('location: competences.php');
 	}
 
@@ -30,7 +30,7 @@
 		<input class="competence" type="text" name="competence" value="<?= $ligne_c['competence'] ?>"><br>
 
 		<label>Titre image</label><br>
-		<input class="competence" type="text" name="titre-img" value="<?= $ligne_c['titre-img'] ?>"><br>
+		<input class="competence" type="text" name="titre_img" value="<?= $ligne_c['titre_img'] ?>"><br>
 
 		<label>Titre niveau</label><br>
 		<input class="niveau" type="text" name="percent_title" placeholder="Pourcentage du niveau" value="<?= $ligne_c['percent_title'] ?>"><br>

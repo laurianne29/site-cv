@@ -1,6 +1,6 @@
 <?php
 
-$bdd = new PDO('mysql:host=localhost;dbname=site-cv','laurianne','laurianne92',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
+$bdd = new PDO('mysql:host=localhost;dbname=site-cv','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
 
 if ($_POST) {
     $sql = $bdd -> prepare("INSERT INTO contact(id_contact, nom, prenom, email, tel, message) VALUES(NULL, :nom, :prenom, :email, :tel, :message)");

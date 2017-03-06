@@ -3,13 +3,13 @@
 <?php
 
 	if (isset($_POST['competence'])) {
-		if ($_POST['competence']!='' && $_POST['percent_circle']!='' && $_POST['percent_title']!='') {
+		if ($_POST['competence']!='' && $_POST['titre_img']!='' && $_POST['percent_title']!='' && $_POST['percent_circle']!='') {
 			$competence = addslashes($_POST['competence']);
-			$titre_image = addslashes($_POST['titre-img']);
-			$percent_circle = addslashes($_POST['percent_circle']);
+			$titre_image = addslashes($_POST['titre_img']);
 			$percent_title = addslashes($_POST['percent_title']);
+			$percent_circle = addslashes($_POST['percent_circle']);
 
-		$bdd -> exec("INSERT INTO competences VALUES (NULL, '$competence','$titre_image','$percent_circle', '$percent_title')");
+		$bdd -> exec("INSERT INTO competences VALUES (NULL, '$competence','$titre_image','$percent_title', '$percent_circle')");
 		header("location: competences.php");
 		exit();
 
@@ -34,10 +34,10 @@
 
 	<form id="formulaire"  method="post">
 		<label>Compétence</label><br>
-		<input class="competence" type="text" name="competence" placeholder="Insérer une compétence..."><br>
+		<input class="competence" type="text" name="competence" placeholder="Insérez une image correspondant à la compétence"><br>
 
 		<label>Titre image</label><br>
-		<input class="competence" type="text" name="titre-img" placeholder="Insérez une image"><br>
+		<input class="competence" type="text" name="titre_img" placeholder="Title de l'image"><br>
 
 		<label>Titre niveau</label><br>
 		<input class="niveau" type="text" name="percent_title" placeholder="Pourcentage du niveau"><br>
@@ -63,8 +63,8 @@
 		</thead>
 		<tr>
 			<?php while ($ligne = $query -> fetch()) { ?>
-			<td><?php echo $ligne['titre-img']; ?></td>
 			<td><?php echo $ligne['competence']; ?></td>
+			<td><?php echo $ligne['titre_img']; ?></td>
 			<td><?php echo $ligne['percent_title']; ?></td>
 			<td><?php echo $ligne['percent_circle']; ?></td>
 			<td><a href="modifier_c.php?id_competence=<?php echo $ligne['id_competence']; ?>"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a></td>

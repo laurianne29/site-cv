@@ -593,12 +593,25 @@ time {
 	color: #242F45;
 }
 .logo-loisir p {
-	font-size: 1em;
+	font-size: 1.1em;
 	font-family: 'Overlock', arial, sans-serif;
 }
 
 .logo-loisir img {
 	margin: 25px 18px;
+}
+
+#langues {
+	margin-top: 35px;
+}
+	#langues h4 {
+		font-family: 'Amatic SC', arial, sans-serif;
+		font-size: 2.8em;
+	}
+
+.langues p{
+	font-family: 'Overlock', arial, sans-serif;
+	font-size: 1.1em;
 }
 
 /* //////////////////////////////////////////////////////////////////// ASIDE CV ////////////////////////////////////////////////////////////////// */
@@ -733,8 +746,7 @@ section .button a:hover {
 /* F O R M */
 section #contactForm {
 	background: rgba(0,0,0,.5);
-	padding-top: 45px;
-	padding-bottom: 45px;
+	padding: 45px;
 	border-radius: 13px;
 }
 
@@ -749,28 +761,6 @@ section#contact .form-group input {
 	border-bottom: 1px solid snow;
 }
 
-/* MOBILE PORTRAIT & MOBILE PAYSAGE */
- @media screen and (max-width: 600px) {
-	section#contact .form-group input, section#contact #input-left   {
-		width: 230px;
-		margin: auto;
-		padding: none;
-	}
-
-}
-
-/* MOBILE PORTRAIT & MOBILE PAYSAGE */
- @media screen and (min-width: 600px) and (max-width: 728px){
-	section#contact .form-group input, section#contact #input-left   {
-		margin: auto;
-	}
-
-}
-
-section#contact #input-left {
-	width: 450px;
-}
-
 section#contact .form-group textarea {
 	background: none;
 	color: snow;
@@ -783,17 +773,23 @@ section#contact .form-group textarea {
 /* MOBILE PORTRAIT & MOBILE PAYSAGE */
  @media screen and (max-width: 600px) {
 	section#contact .form-group textarea {
-		width: 250px;
-		margin: auto;
+		width: auto;
+		/* margin: auto; */
+		padding: none;
 	}
 }
-
 
 
 section#contact button {
 	background: none;
 }
 
+ @media screen and (max-width: 600px) {
+	section#contact button {
+		width: 210px;
+		margin: auto;
+	}
+}
 /*section#contact .form-group {
   margin-bottom: 25px;
 }
