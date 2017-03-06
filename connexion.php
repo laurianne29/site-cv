@@ -14,7 +14,7 @@ if (isset($_POST['connexion'])) {
 	$mdp = $_POST['mdp'];
 	// requêtes sql qui permet de vérifier si les identifiant sont correcte
 
-	$query = $bdd -> prepare("SELECT * FROM user,competences,experiences WHERE pseudo = :pseudo && mdp = :mdp");
+	$query = $bdd -> prepare("SELECT * FROM user WHERE pseudo = :pseudo && mdp = :mdp");
 	$query -> bindParam(':pseudo',$pseudo, PDO::PARAM_STR);
 	$query -> bindParam(':mdp',$mdp, PDO::PARAM_STR);
 	$query -> execute();
@@ -23,6 +23,7 @@ if (isset($_POST['connexion'])) {
 	//ici nous allons tester si il trouve bien l'utilisateur qui a été taper
 	$userIsOk = $query -> rowCount();
 
+	
 	// si il a été trouver alors ....
 	if ($userIsOk) {
 		//On enregistre ses données dans....
@@ -56,13 +57,13 @@ if (isset($_POST['connexion'])) {
 					<img src="img/login.png" alt="image_login" />
 				</div>
 	            <p id="profile-name" class="profile-name-card"></p>
-
-	            <form class="form-signin" method="post" action="index02.php">
-	                <input type="text" id="pseudo" class="form-control" placeholder="Pseudo" required autofocus>
+			
+	            <form class="form-signin" method="post" action="">
+	                <input type="text" id="pseudo" class="form-control" placeholder="Pseudo" name="pseudo" required autofocus>
 	                
-	                <input type="password" id="mdp" class="form-control" placeholder="Mot de passe" required>
+	                <input type="password" id="mdp" class="form-control" placeholder="Mot de passe" name="mdp" required>
 
-	                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Connexion</button>
+	                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" name="connexion">Connexion</button>
 	            </form>
 	            <a href="?action=recup_password" class="forgot-password">Mot de passe oublié ?</a>
 			</div>
